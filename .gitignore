@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.lake/
+
+# results/ and figures/ are checked in on purpose: they are the evidence every
+# verdict in README.md rests on, and they are cheap to store. The one exception
+# is the daily panel cache, which is 11 MB, is not a result, and is rebuilt from
+# $BINANCE_DATA_DIR on demand by scripts/calibrate_from_data.py.
+results/_daily_panel.parquet

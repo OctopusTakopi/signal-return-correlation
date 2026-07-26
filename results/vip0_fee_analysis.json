@@ -1,0 +1,454 @@
+{
+  "kappa": 3.0,
+  "tiers": [
+    {
+      "name": "VIP 0",
+      "maker_bps": 2.0,
+      "taker_bps": 5.0
+    },
+    {
+      "name": "VIP 0, BNB discount",
+      "maker_bps": 1.8,
+      "taker_bps": 4.5
+    },
+    {
+      "name": "VIP 9",
+      "maker_bps": 0.0,
+      "taker_bps": 1.7
+    }
+  ],
+  "symbolic": {
+    "u_star": "kappa*rho*sigma/(2*f)",
+    "tau_star": "kappa**2*rho**2*sigma**2/(4*f**2)",
+    "tau_star_matches_closed_form": true,
+    "peak_net": "-c + kappa**2*rho**2*sigma**2/(4*f)",
+    "peak_net_matches_closed_form": true,
+    "rho_floor": "2*sqrt(c)*sqrt(f)/(kappa*sigma)",
+    "rho_floor_matches_closed_form": true
+  },
+  "costs": [
+    {
+      "instrument": "BTCUSDT perp",
+      "style": "cross in, cross out",
+      "vip0_bps": 10.015099999999999,
+      "vip0_bnb_bps": 9.0151,
+      "vip9_bps": 3.4151
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "style": "post in, cross out",
+      "vip0_bps": 7.007549999999999,
+      "vip0_bnb_bps": 6.30755,
+      "vip9_bps": 1.70755
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "style": "quote both sides",
+      "vip0_bps": 3.9849,
+      "vip0_bnb_bps": 3.5849,
+      "vip9_bps": -0.0151
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "style": "cross in, cross out",
+      "vip0_bps": 10.0517,
+      "vip0_bnb_bps": 9.0517,
+      "vip9_bps": 3.4516999999999998
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "style": "post in, cross out",
+      "vip0_bps": 7.02585,
+      "vip0_bnb_bps": 6.32585,
+      "vip9_bps": 1.7258499999999999
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "style": "quote both sides",
+      "vip0_bps": 3.9483,
+      "vip0_bnb_bps": 3.5483000000000002,
+      "vip9_bps": -0.0517
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "style": "cross in, cross out",
+      "vip0_bps": 12.999999999999998,
+      "vip0_bnb_bps": 12.0,
+      "vip9_bps": 6.4
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "style": "post in, cross out",
+      "vip0_bps": 8.5,
+      "vip0_bnb_bps": 7.800000000000001,
+      "vip9_bps": 3.2
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "style": "quote both sides",
+      "vip0_bps": 0.9999999999999999,
+      "vip0_bnb_bps": 0.5999999999999999,
+      "vip9_bps": -3.0
+    }
+  ],
+  "floors_vip0_taker": {
+    "BTC": {
+      "1 s": 3.9251015556716484,
+      "10 s": 1.2412260963392605,
+      "1 min": 0.5067284319096372,
+      "5 min": 0.2266158439763645,
+      "30 min": 0.09251553089537631,
+      "1 h": 0.06541835926119413,
+      "4 h": 0.032709179630597066,
+      "1 day": 0.013353466666666664,
+      "3 days": 0.007709627574614694,
+      "1 week": 0.005047135991512948
+    },
+    "ETH": {
+      "1 s": 2.9311352437540084,
+      "10 s": 0.9269063500255499,
+      "1 min": 0.37840793281802976,
+      "5 min": 0.16922917220125763,
+      "30 min": 0.06908752024777812,
+      "1 h": 0.04885225406256681,
+      "4 h": 0.024426127031283405,
+      "1 day": 0.009971924603174604,
+      "3 days": 0.00575729335398151,
+      "1 week": 0.0037690332275266366
+    },
+    "alt": {
+      "1 s": 2.4542093761989454,
+      "10 s": 0.7760891483729698,
+      "1 min": 0.31683706807082024,
+      "5 min": 0.14169384439961644,
+      "30 min": 0.05784626974539603,
+      "1 h": 0.04090348960331575,
+      "4 h": 0.020451744801657876,
+      "1 day": 0.008349389852280025,
+      "3 days": 0.004820522478783002,
+      "1 week": 0.003155772735465609
+    }
+  },
+  "conventions": [
+    {
+      "instrument": "BTCUSDT perp",
+      "horizon": "1 s",
+      "kappa_sd_move_bps": 2.551551815399144,
+      "cost_bps": 10.015099999999999,
+      "floor_total_vol": 3.9251015556716484,
+      "floor_residual_vol": 0.9690450241759024,
+      "unreachable": true
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "horizon": "10 s",
+      "kappa_sd_move_bps": 8.068715304598786,
+      "cost_bps": 10.015099999999999,
+      "floor_total_vol": 1.2412260963392605,
+      "floor_residual_vol": 0.7787160792489636,
+      "unreachable": true
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "horizon": "1 min",
+      "kappa_sd_move_bps": 19.764235376052373,
+      "cost_bps": 10.015099999999999,
+      "floor_total_vol": 0.5067284319096372,
+      "floor_residual_vol": 0.4520086336130468,
+      "unreachable": false
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "horizon": "1 s",
+      "kappa_sd_move_bps": 3.4292856398964493,
+      "cost_bps": 10.0517,
+      "floor_total_vol": 2.9311352437540084,
+      "floor_residual_vol": 0.9464362660429528,
+      "unreachable": true
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "horizon": "10 s",
+      "kappa_sd_move_bps": 10.844353369380768,
+      "cost_bps": 10.0517,
+      "floor_total_vol": 0.9269063500255499,
+      "floor_residual_vol": 0.6797950742183202,
+      "unreachable": false
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "horizon": "1 min",
+      "kappa_sd_move_bps": 26.563132345414388,
+      "cost_bps": 10.0517,
+      "floor_total_vol": 0.37840793281802976,
+      "floor_residual_vol": 0.3539162770662328,
+      "unreachable": false
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "horizon": "1 s",
+      "kappa_sd_move_bps": 5.297021568768622,
+      "cost_bps": 12.999999999999998,
+      "floor_total_vol": 2.4542093761989454,
+      "floor_residual_vol": 0.9260743060495681,
+      "unreachable": true
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "horizon": "10 s",
+      "kappa_sd_move_bps": 16.750652972347076,
+      "cost_bps": 12.999999999999998,
+      "floor_total_vol": 0.7760891483729698,
+      "floor_residual_vol": 0.613109079614839,
+      "unreachable": false
+    }
+  ],
+  "min_horizon_btc_vip0": [
+    {
+      "ic": 0.005,
+      "cross in, cross out": 7.132602880711109,
+      "post in, cross out": 3.4919649423999988,
+      "quote both sides": 1.1292037696000001
+    },
+    {
+      "ic": 0.01,
+      "cross in, cross out": 1.7831507201777772,
+      "post in, cross out": 0.8729912355999997,
+      "quote both sides": 0.28230094240000003
+    },
+    {
+      "ic": 0.02,
+      "cross in, cross out": 0.4457876800444443,
+      "post in, cross out": 0.21824780889999992,
+      "quote both sides": 0.07057523560000001
+    },
+    {
+      "ic": 0.03,
+      "cross in, cross out": 0.1981278577975308,
+      "post in, cross out": 0.09699902617777774,
+      "quote both sides": 0.031366771377777776
+    },
+    {
+      "ic": 0.05,
+      "cross in, cross out": 0.07132602880711107,
+      "post in, cross out": 0.034919649423999985,
+      "quote both sides": 0.011292037696
+    },
+    {
+      "ic": 0.1,
+      "cross in, cross out": 0.017831507201777768,
+      "post in, cross out": 0.008729912355999996,
+      "quote both sides": 0.002823009424
+    },
+    {
+      "ic": 0.2,
+      "cross in, cross out": 0.004457876800444442,
+      "post in, cross out": 0.002182478088999999,
+      "quote both sides": 0.000705752356
+    }
+  ],
+  "absolute_floor": [
+    {
+      "instrument": "BTCUSDT perp",
+      "tier": "VIP 0",
+      "cost_bps": 10.015099999999999,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.01461695818789486,
+      "tau_star_days": 3.338366666666666
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "tier": "VIP 0, BNB discount",
+      "cost_bps": 9.0151,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.013868025574440413,
+      "tau_star_days": 3.0050333333333343
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "tier": "VIP 9",
+      "cost_bps": 3.4151,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.008535541380994334,
+      "tau_star_days": 1.138366666666667
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "tier": "VIP 0",
+      "cost_bps": 10.0517,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.010895567361685714,
+      "tau_star_days": 3.3505666666666647
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "tier": "VIP 0, BNB discount",
+      "cost_bps": 9.0517,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.01033939594297503,
+      "tau_star_days": 3.017233333333333
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "tier": "VIP 9",
+      "cost_bps": 3.4516999999999998,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.006384789920431395,
+      "tau_star_days": 1.1505666666666667
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "tier": "VIP 0",
+      "cost_bps": 12.999999999999998,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.008021834294667178,
+      "tau_star_days": 4.333333333333333
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "tier": "VIP 0, BNB discount",
+      "cost_bps": 12.0,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.007707129094412332,
+      "tau_star_days": 4.0
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "tier": "VIP 9",
+      "cost_bps": 6.4,
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.0056284912781519965,
+      "tau_star_days": 2.133333333333333
+    }
+  ],
+  "funding_sensitivity_btc_vip0": [
+    {
+      "funding_bps_per_day": 0.0,
+      "rho_min_abs": null,
+      "note": "symmetric book pays no expected funding"
+    },
+    {
+      "funding_bps_per_day": 1.0,
+      "rho_min_abs": 0.008439104744514602,
+      "tau_star_days": 10.015099999999999
+    },
+    {
+      "funding_bps_per_day": 3.0,
+      "rho_min_abs": 0.01461695818789486,
+      "tau_star_days": 3.338366666666666
+    },
+    {
+      "funding_bps_per_day": 10.0,
+      "rho_min_abs": 0.026686792405399506,
+      "tau_star_days": 1.0015100000000001
+    },
+    {
+      "funding_bps_per_day": 17.8,
+      "rho_min_abs": 0.03560462192219181,
+      "tau_star_days": 0.5626460674157301
+    },
+    {
+      "funding_bps_per_day": 30.0,
+      "rho_min_abs": 0.046222880337195196,
+      "tau_star_days": 0.3338366666666666
+    }
+  ],
+  "capture_vip0": [
+    {
+      "horizon": "1 h",
+      "ic": 0.03,
+      "floor": 0.06541835926119413,
+      "multiple": 0.4585868606123214,
+      "gross_kept": 1.115266813629559e-11,
+      "net_ir_100_symbols": 3.205131959523443e-05
+    },
+    {
+      "horizon": "1 h",
+      "ic": 0.05,
+      "floor": 0.06541835926119413,
+      "multiple": 0.7643114343538691,
+      "gross_kept": 2.4898402645037108e-05,
+      "net_ir_100_symbols": 0.09983587372305872
+    },
+    {
+      "horizon": "1 h",
+      "ic": 0.1,
+      "floor": 0.06541835926119413,
+      "multiple": 1.5286228687077381,
+      "gross_kept": 0.023515922057998954,
+      "net_ir_100_symbols": 7.867494806942624
+    },
+    {
+      "horizon": "4 h",
+      "ic": 0.03,
+      "floor": 0.032709179630597066,
+      "multiple": 0.9171737212246428,
+      "gross_kept": 0.00035614297558064366,
+      "net_ir_100_symbols": 0.12183902558647022
+    },
+    {
+      "horizon": "4 h",
+      "ic": 0.05,
+      "floor": 0.032709179630597066,
+      "multiple": 1.5286228687077381,
+      "gross_kept": 0.023515922057998954,
+      "net_ir_100_symbols": 1.9687302067124652
+    },
+    {
+      "horizon": "4 h",
+      "ic": 0.1,
+      "floor": 0.032709179630597066,
+      "multiple": 3.0572457374154762,
+      "gross_kept": 0.216394491910409,
+      "net_ir_100_symbols": 14.114021421953918
+    },
+    {
+      "horizon": "1 day",
+      "ic": 0.03,
+      "floor": 0.013353466666666664,
+      "multiple": 2.2466076224900404,
+      "gross_kept": 0.10580931286840133,
+      "net_ir_100_symbols": 1.1347820595369815
+    },
+    {
+      "horizon": "1 day",
+      "ic": 0.05,
+      "floor": 0.013353466666666664,
+      "multiple": 3.744346037483401,
+      "gross_kept": 0.30067388132615414,
+      "net_ir_100_symbols": 3.521713550388602
+    },
+    {
+      "horizon": "1 day",
+      "ic": 0.1,
+      "floor": 0.013353466666666664,
+      "multiple": 7.488692074966802,
+      "gross_kept": 0.5771029799542076,
+      "net_ir_100_symbols": 10.577953698218126
+    },
+    {
+      "horizon": "3 days",
+      "ic": 0.03,
+      "floor": 0.007709627574614694,
+      "multiple": 3.89123854682427,
+      "gross_kept": 0.3170433608181216,
+      "net_ir_100_symbols": 1.2606641563363183
+    },
+    {
+      "horizon": "3 days",
+      "ic": 0.05,
+      "floor": 0.007709627574614694,
+      "multiple": 6.48539757804045,
+      "gross_kept": 0.5253662084543554,
+      "net_ir_100_symbols": 2.8800254823233264
+    },
+    {
+      "horizon": "3 days",
+      "ic": 0.1,
+      "floor": 0.007709627574614694,
+      "multiple": 12.9707951560809,
+      "gross_kept": 0.7367511026415233,
+      "net_ir_100_symbols": 7.158493340967266
+    }
+  ]
+}

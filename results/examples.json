@@ -1,0 +1,191 @@
+{
+  "cases": [
+    {
+      "key": "equity",
+      "label": "US equity, 1-day horizon",
+      "tweet": "5/9",
+      "note": "3% daily vol, 5 bps to trade, 1-day forecast",
+      "stated": 0.005,
+      "sigma_daily": 0.03,
+      "tau_days": 1.0,
+      "cost": 0.0005,
+      "horizon_vol": 0.03,
+      "floor_exact": 0.005555555555555556,
+      "floor_pct": 0.5555555555555556,
+      "stated_pct": 0.5,
+      "abs_error_pct": 0.055555555555555566,
+      "rel_error": 0.11111111111111116,
+      "beta_at_floor": 0.00016666666666666666,
+      "beta_at_floor_bps": 1.6666666666666665,
+      "corr_approx_error": -8.573189750130106e-08,
+      "corr_approx_rel_error": -1.5431741550275824e-05,
+      "rounds_to_stated": false
+    },
+    {
+      "key": "equity_hedged",
+      "label": "US equity, factor-hedged",
+      "tweet": "6/9",
+      "note": "vol halved by the hedge, cost doubled by the hedge leg",
+      "stated": 0.02,
+      "sigma_daily": 0.015,
+      "tau_days": 1.0,
+      "cost": 0.001,
+      "horizon_vol": 0.015,
+      "floor_exact": 0.022222222222222223,
+      "floor_pct": 2.2222222222222223,
+      "stated_pct": 2.0,
+      "abs_error_pct": 0.22222222222222227,
+      "rel_error": 0.11111111111111116,
+      "beta_at_floor": 0.0003333333333333333,
+      "beta_at_floor_bps": 3.333333333333333,
+      "corr_approx_error": -5.48493707533404e-06,
+      "corr_approx_rel_error": -0.00024682216839000404,
+      "rounds_to_stated": true
+    },
+    {
+      "key": "fx_1min",
+      "label": "FX, 1-minute horizon",
+      "tweet": "7/9",
+      "note": "0.3% daily vol, 0.2 bps to trade, 1 minute = 1/1440 day",
+      "stated": 0.085,
+      "sigma_daily": 0.003,
+      "tau_days": 0.0006944444444444445,
+      "cost": 2e-05,
+      "horizon_vol": 7.905694150420948e-05,
+      "floor_exact": 0.08432740427115677,
+      "floor_pct": 8.432740427115677,
+      "stated_pct": 8.5,
+      "abs_error_pct": -0.06725957288432338,
+      "rel_error": -0.007912890927567418,
+      "beta_at_floor": 6.666666666666666e-06,
+      "beta_at_floor_bps": 0.06666666666666665,
+      "corr_approx_error": -0.00029824109084324035,
+      "corr_approx_rel_error": -0.0035367042709418817,
+      "rounds_to_stated": true
+    }
+  ],
+  "estimability": [
+    {
+      "key": "equity",
+      "regime": "at the floor",
+      "rho": 0.005555555555555556,
+      "rho_pct": 0.5555555555555556,
+      "n_for_t2": 129593.00012345679,
+      "n_for_t3": 291583.0002777778,
+      "asset_years_for_t3": 1157.0753979276897,
+      "human_for_t3": "1,157 asset-years",
+      "periods_per_year": 252.0
+    },
+    {
+      "key": "equity",
+      "regime": "2x the floor",
+      "rho": 0.011111111111111112,
+      "rho_pct": 1.1111111111111112,
+      "n_for_t2": 32393.000493827156,
+      "n_for_t3": 72883.0011111111,
+      "asset_years_for_t3": 289.218258377425,
+      "human_for_t3": "289 asset-years",
+      "periods_per_year": 252.0
+    },
+    {
+      "key": "equity_hedged",
+      "regime": "at the floor",
+      "rho": 0.022222222222222223,
+      "rho_pct": 2.2222222222222223,
+      "n_for_t2": 8093.001975308641,
+      "n_for_t3": 18208.004444444447,
+      "asset_years_for_t3": 72.25398589065257,
+      "human_for_t3": "72 asset-years",
+      "periods_per_year": 252.0
+    },
+    {
+      "key": "equity_hedged",
+      "regime": "2x the floor",
+      "rho": 0.044444444444444446,
+      "rho_pct": 4.444444444444445,
+      "n_for_t2": 2018.007901234568,
+      "n_for_t3": 4539.267777777779,
+      "asset_years_for_t3": 18.012967372134042,
+      "human_for_t3": "18 asset-years",
+      "periods_per_year": 252.0
+    },
+    {
+      "key": "fx_1min",
+      "regime": "at the floor",
+      "rho": 0.08432740427115677,
+      "rho_pct": 8.432740427115677,
+      "n_for_t2": 555.5284444444446,
+      "n_for_t3": 1248.6890000000005,
+      "asset_years_for_t3": 0.003441052138447973,
+      "human_for_t3": "5.6 trading hours",
+      "periods_per_year": 362880.0
+    },
+    {
+      "key": "fx_1min",
+      "regime": "2x the floor",
+      "rho": 0.16865480854231354,
+      "rho_pct": 16.865480854231354,
+      "n_for_t2": 133.73877777777778,
+      "n_for_t3": 299.6622499999999,
+      "asset_years_for_t3": 0.0008257888282627864,
+      "human_for_t3": "1.4 trading hours",
+      "periods_per_year": 362880.0
+    }
+  ],
+  "fundamental_law": [
+    {
+      "key": "equity",
+      "rho": 0.005555555555555556,
+      "breadth": 1,
+      "annual_ir": 0.08819034941713842
+    },
+    {
+      "key": "equity",
+      "rho": 0.005555555555555556,
+      "breadth": 100,
+      "annual_ir": 0.8819034941713841
+    },
+    {
+      "key": "equity",
+      "rho": 0.005555555555555556,
+      "breadth": 500,
+      "annual_ir": 1.9719961625618045
+    },
+    {
+      "key": "equity_hedged",
+      "rho": 0.022222222222222223,
+      "breadth": 1,
+      "annual_ir": 0.35267977079852975
+    },
+    {
+      "key": "equity_hedged",
+      "rho": 0.022222222222222223,
+      "breadth": 100,
+      "annual_ir": 3.5267977079852972
+    },
+    {
+      "key": "equity_hedged",
+      "rho": 0.022222222222222223,
+      "breadth": 500,
+      "annual_ir": 7.886159417945578
+    },
+    {
+      "key": "fx_1min",
+      "rho": 0.08432740427115677,
+      "breadth": 1,
+      "annual_ir": 50.61876616517564
+    },
+    {
+      "key": "fx_1min",
+      "rho": 0.08432740427115677,
+      "breadth": 100,
+      "annual_ir": 506.18766165175646
+    },
+    {
+      "key": "fx_1min",
+      "rho": 0.08432740427115677,
+      "breadth": 500,
+      "annual_ir": 1131.870020824991
+    }
+  ]
+}

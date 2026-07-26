@@ -1,0 +1,114 @@
+[
+  {
+    "name": "var_y",
+    "claim": "Var(y) = beta^2 + sigma^2 tau",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "bilinearity of Var with Cov(x,eps)=0; the thread's Var(y)=sigma^2 tau silently drops beta^2"
+  },
+  {
+    "name": "corr_expression",
+    "claim": "Corr(x,y) = beta/(sigma sqrt(tau))",
+    "kind": "approximation",
+    "holds_exactly": false,
+    "detail": "exact Corr = beta/sqrt(beta**2 + sigma**2*tau); thread = beta/(sigma*sqrt(tau)); equal only in the limit beta << sigma sqrt(tau)"
+  },
+  {
+    "name": "corr_leading_order",
+    "claim": "beta = rho sigma sqrt(tau) is right to O(rho^3)",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "Corr(beta=rho sigma sqrt(tau)) = rho/sqrt(rho**2 + 1) = -rho**3/2 + rho + O(rho^5); relative error -rho^2/2"
+  },
+  {
+    "name": "beta_inversion",
+    "claim": "exact beta = rho sigma sqrt(tau)/sqrt(1-rho^2)",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "solving Corr(x,y)=rho for beta gives rho*sigma*sqrt(tau)*sqrt(-1/(rho - 1))/sqrt(rho + 1)"
+  },
+  {
+    "name": "cost_bound",
+    "claim": "kappa beta <= c  =>  rho <= c/(kappa sigma sqrt(tau))",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "rho_floor = c/(kappa*sigma*sqrt(tau)); thread uses kappa = 3"
+  },
+  {
+    "name": "exact_floor_residual",
+    "claim": "residual-vol reading: floor = a/sqrt(1+a^2) < 1",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "solving rho/sqrt(1-rho^2) = a gives a/sqrt(a**2 + 1); bounded above by 1, so this reading never calls a horizon unreachable"
+  },
+  {
+    "name": "floor_readings_agree_to_second_order",
+    "claim": "the two readings of sigma agree to O(a^3)",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "a/sqrt(1+a^2) = a - a^3/2 + O(a^5), so the readings differ only where the floor is a substantial fraction of 1"
+  },
+  {
+    "name": "hedge_scaling",
+    "claim": "double the cost and halve the vol => 4x the floor",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "floor(2c, sigma/2)/floor(c, sigma) = 4; matches tweet 6/9 going 0.5% -> 2%"
+  },
+  {
+    "name": "band_universality",
+    "claim": "k = c/beta = kappa/m, free of sigma, tau and c",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "k = kappa/m; so trade frequency and gross capture are functions of the multiple alone"
+  },
+  {
+    "name": "trunc_first_moment",
+    "claim": "E[(|x|-k)^+] = 2(phi(k) - k Q(k))",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "integral evaluates to k*erf(sqrt(2)*k/2) - k + sqrt(2)*exp(-k**2/2)/sqrt(pi)"
+  },
+  {
+    "name": "trunc_second_moment",
+    "claim": "E[((|x|-k)^+)^2] = 2((1+k^2) Q(k) - k phi(k))",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "integral evaluates to -k**2*erf(sqrt(2)*k/2) + k**2 - sqrt(2)*k*exp(-k**2/2)/sqrt(pi) - erf(sqrt(2)*k/2) + 1"
+  },
+  {
+    "name": "trunc_moment_limits",
+    "claim": "k->0 gives E|x| = sqrt(2/pi) and E[x^2] = 1",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "m1(0) = sqrt(2)/sqrt(pi), m2(0) = 1"
+  },
+  {
+    "name": "proportional_sharpe",
+    "claim": "per-period Sharpe of h=x is rho/sqrt(1+rho^2) ~ rho",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "SR = rho/sqrt(1+rho^2); equals rho to O(rho^3), so IC is the per-bet Sharpe to leading order and IR = IC sqrt(BR) follows as an approximation, given independence across bets"
+  },
+  {
+    "name": "proportional_sharpe_loading_form",
+    "claim": "with r = beta/(sigma sqrt(tau)), SR = r/sqrt(1+2 r^2)",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "the same Sharpe through the loading-to-noise ratio; equals the rho form under r = rho/sqrt(1-rho^2), and differs from it otherwise"
+  },
+  {
+    "name": "r2_ir_bridge_is_approximate",
+    "claim": "exact IR^2/BR = R^2/(1+R^2), so R^2 = IR^2/BR holds only to O(rho^4)",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "IR^2/BR is the per-bet squared Sharpe rho^2/(1+rho^2); reading it as R^2 = rho^2 is the small-IC limit"
+  },
+  {
+    "name": "effective_breadth",
+    "claim": "BR_eff = N/(1 + (N-1) rho_alpha)",
+    "kind": "identity",
+    "holds_exactly": true,
+    "detail": "BR_eff = n/(rho_a*(n - 1) + 1); -> 1/rho_alpha as N -> infinity, so alpha crowding caps breadth however many names are added"
+  }
+]

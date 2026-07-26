@@ -1,0 +1,11 @@
+name = "signal-return-correlation"
+version = "0.1.0"
+defaultTargets = ["AlphaCorrelationBound"]
+
+[[lean_lib]]
+name = "AlphaCorrelationBound"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.32.1"

@@ -1,0 +1,166 @@
+{
+  "rule_1": {
+    "claim": "1.5x the floor => a trade in about 5% of periods",
+    "model_frequency": 0.04550026389635839,
+    "model_frequency_pct": 4.550026389635839,
+    "stated_pct": 5.0,
+    "verdict": "reproduces"
+  },
+  "rule_2": {
+    "claim": "2x the floor => a trade in 20-30% of periods",
+    "model_frequency": 0.13361440253771614,
+    "model_frequency_pct": 13.361440253771613,
+    "stated_range_pct": [
+      20.0,
+      30.0
+    ],
+    "multiple_needed_for_20pct": 2.3409124382171376,
+    "multiple_needed_for_30pct": 2.8945420230674417,
+    "verdict": "does not reproduce"
+  },
+  "table": [
+    {
+      "multiple": 1.0,
+      "band_k": 3.0,
+      "trade_frequency": 0.0026997960632601866,
+      "trade_frequency_pct": 0.26997960632601864,
+      "gross_capture": 0.0009579188163841335,
+      "gross_capture_pct": 0.09579188163841335,
+      "net_sharpe_per_period": 8.17202660988727e-05,
+      "net_ir_annual_1_asset": 0.001297269007029838,
+      "net_ir_annual_500_assets": 0.029007816848223702,
+      "gross_ir_annual_500_assets": 1.9719961625618045
+    },
+    {
+      "multiple": 1.25,
+      "band_k": 2.4,
+      "trade_frequency": 0.016395071849192262,
+      "trade_frequency_pct": 1.6395071849192262,
+      "gross_capture": 0.0068191420399832245,
+      "gross_capture_pct": 0.6819142039983225,
+      "net_sharpe_per_period": 0.0002950859497850099,
+      "net_ir_annual_1_asset": 0.004684344231122579,
+      "net_ir_annual_500_assets": 0.10474512130799074,
+      "gross_ir_annual_500_assets": 2.4649738066134397
+    },
+    {
+      "multiple": 1.5,
+      "band_k": 2.0,
+      "trade_frequency": 0.04550026389635839,
+      "trade_frequency_pct": 4.550026389635839,
+      "gross_capture": 0.021283035250828683,
+      "gross_capture_pct": 2.128303525082868,
+      "net_sharpe_per_period": 0.0006634095115854736,
+      "net_ir_annual_1_asset": 0.01053129951029992,
+      "net_ir_annual_500_assets": 0.23548701596440866,
+      "gross_ir_annual_500_assets": 2.9579371871805065
+    },
+    {
+      "multiple": 1.75,
+      "band_k": 1.7142857142857142,
+      "trade_frequency": 0.08647626549366563,
+      "trade_frequency_pct": 8.647626549366564,
+      "gross_capture": 0.04426871141873536,
+      "gross_capture_pct": 4.426871141873536,
+      "net_sharpe_per_period": 0.001167745400631158,
+      "net_ir_annual_1_asset": 0.01853738354825719,
+      "net_ir_annual_500_assets": 0.41450849738889334,
+      "gross_ir_annual_500_assets": 3.4508834524739873
+    },
+    {
+      "multiple": 2.0,
+      "band_k": 1.5,
+      "trade_frequency": 0.13361440253771614,
+      "trade_frequency_pct": 13.361440253771613,
+      "gross_capture": 0.07346123788412424,
+      "gross_capture_pct": 7.346123788412425,
+      "net_sharpe_per_period": 0.0017816429709412746,
+      "net_ir_annual_1_asset": 0.02828270535730134,
+      "net_ir_annual_500_assets": 0.6324205176652327,
+      "gross_ir_annual_500_assets": 3.9438097511999795
+    },
+    {
+      "multiple": 2.25,
+      "band_k": 1.3333333333333333,
+      "trade_frequency": 0.18242243945173575,
+      "trade_frequency_pct": 18.242243945173577,
+      "gross_capture": 0.10626879406926583,
+      "gross_capture_pct": 10.626879406926584,
+      "net_sharpe_per_period": 0.0024814477363053946,
+      "net_ir_annual_1_asset": 0.039391761610009554,
+      "net_ir_annual_500_assets": 0.8808265671344792,
+      "gross_ir_annual_500_assets": 4.436713232642128
+    },
+    {
+      "multiple": 2.5,
+      "band_k": 1.2,
+      "trade_frequency": 0.23013934044341644,
+      "trade_frequency_pct": 23.013934044341646,
+      "gross_capture": 0.14062798924373335,
+      "gross_capture_pct": 14.062798924373334,
+      "net_sharpe_per_period": 0.0032483948345789233,
+      "net_ir_annual_1_asset": 0.051566669354655786,
+      "net_ir_annual_500_assets": 1.1530657805026554,
+      "gross_ir_annual_500_assets": 4.929591046744026
+    },
+    {
+      "multiple": 2.75,
+      "band_k": 1.0909090909090908,
+      "trade_frequency": 0.2753128865219626,
+      "trade_frequency_pct": 27.531288652196263,
+      "gross_capture": 0.17511773864649488,
+      "gross_capture_pct": 17.511773864649488,
+      "net_sharpe_per_period": 0.0040681606287407916,
+      "net_ir_annual_1_asset": 0.0645800479026738,
+      "net_ir_annual_500_assets": 1.444053771005713,
+      "gross_ir_annual_500_assets": 5.42244034419156
+    },
+    {
+      "multiple": 3.0,
+      "band_k": 1.0,
+      "trade_frequency": 0.31731050786291415,
+      "trade_frequency_pct": 31.731050786291416,
+      "gross_capture": 0.20884091428928195,
+      "gross_capture_pct": 20.884091428928194,
+      "net_sharpe_per_period": 0.004929907901268861,
+      "net_ir_annual_1_asset": 0.07825986175925864,
+      "net_ir_annual_500_assets": 1.7499437080343858,
+      "gross_ir_annual_500_assets": 5.91525827649521
+    },
+    {
+      "multiple": 4.0,
+      "band_k": 0.75,
+      "trade_frequency": 0.4532547047537364,
+      "trade_frequency_pct": 45.32547047537364,
+      "gross_capture": 0.3287867050345417,
+      "gross_capture_pct": 32.878670503454174,
+      "net_sharpe_per_period": 0.008658172541951491,
+      "net_ir_annual_1_asset": 0.13744422812574958,
+      "net_ir_annual_500_assets": 3.073346372041646,
+      "gross_ir_annual_500_assets": 7.886159417945578
+    },
+    {
+      "multiple": 5.0,
+      "band_k": 0.6,
+      "trade_frequency": 0.5485062355001472,
+      "trade_frequency_pct": 54.850623550014724,
+      "gross_capture": 0.42279983979644836,
+      "gross_capture_pct": 42.27998397964484,
+      "net_sharpe_per_period": 0.012650585967195737,
+      "net_ir_annual_1_asset": 0.2008218264506606,
+      "net_ir_annual_500_assets": 4.490512553093424,
+      "gross_ir_annual_500_assets": 9.856331108197304
+    }
+  ],
+  "stated": {
+    "1.5x -> ~5%": {
+      "stated_multiple": 1.5,
+      "stated_freq": 0.05
+    },
+    "2x -> 20-30%": {
+      "stated_multiple": 2.0,
+      "stated_freq_low": 0.2,
+      "stated_freq_high": 0.3
+    }
+  }
+}

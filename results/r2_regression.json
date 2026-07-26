@@ -1,0 +1,88 @@
+{
+  "identity": "population simple-regression R2 = IC^2",
+  "caveat": "R2 loses the slope sign; out-of-sample R2 may be negative",
+  "floors": [
+    {
+      "market": "equity",
+      "ic_floor_total": 0.005555555555555556,
+      "r2_floor_total": 3.08641975308642e-05,
+      "r2_floor_total_pct": 0.00308641975308642,
+      "ic_floor_residual": 0.005555469823658055,
+      "r2_floor_residual": 3.086324496157526e-05
+    },
+    {
+      "market": "equity_hedged",
+      "ic_floor_total": 0.022222222222222223,
+      "r2_floor_total": 0.0004938271604938272,
+      "r2_floor_total_pct": 0.04938271604938272,
+      "ic_floor_residual": 0.02221673728514689,
+      "r2_floor_residual": 0.000493583415597236
+    },
+    {
+      "market": "fx_1min",
+      "ic_floor_total": 0.08432740427115677,
+      "r2_floor_total": 0.00711111111111111,
+      "r2_floor_total_pct": 0.711111111111111,
+      "ic_floor_residual": 0.08402916318031353,
+      "r2_floor_residual": 0.007060900264783759
+    }
+  ],
+  "regressions": [
+    {
+      "case": "negative",
+      "target_ic": -0.2,
+      "target_r2": 0.04000000000000001,
+      "fitted_intercept": -0.0001229752288818759,
+      "fitted_slope": -0.006153296294767795,
+      "train_sample_ic": -0.20199204532133763,
+      "train_r2": 0.040800786373097475,
+      "test_r2": 0.04063052089707786
+    },
+    {
+      "case": "weak",
+      "target_ic": 0.05,
+      "target_r2": 0.0025000000000000005,
+      "fitted_intercept": 2.6535763811145015e-05,
+      "fitted_slope": 0.0015245256828617243,
+      "train_sample_ic": 0.05052751126059806,
+      "train_r2": 0.0025530293941901094,
+      "test_r2": 0.0022198973947453737
+    },
+    {
+      "case": "strong",
+      "target_ic": 0.6,
+      "target_r2": 0.36,
+      "fitted_intercept": 7.334363962504579e-05,
+      "fitted_slope": 0.022382816759440653,
+      "train_sample_ic": 0.5991554145951883,
+      "train_r2": 0.35898721083873164,
+      "test_r2": 0.36091000731649137
+    }
+  ],
+  "multiple_mapping": [
+    {
+      "ic_multiple": 1.0,
+      "r2_multiple": 1.0,
+      "no_trade_band_sigma": 3.0,
+      "trade_frequency": 0.0026997960632601866
+    },
+    {
+      "ic_multiple": 1.5,
+      "r2_multiple": 2.25,
+      "no_trade_band_sigma": 2.0,
+      "trade_frequency": 0.04550026389635839
+    },
+    {
+      "ic_multiple": 2.0,
+      "r2_multiple": 4.0,
+      "no_trade_band_sigma": 1.5,
+      "trade_frequency": 0.13361440253771614
+    },
+    {
+      "ic_multiple": 3.0,
+      "r2_multiple": 9.0,
+      "no_trade_band_sigma": 1.0,
+      "trade_frequency": 0.31731050786291415
+    }
+  ]
+}

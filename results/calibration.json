@@ -1,0 +1,337 @@
+{
+  "source": "$BINANCE_DATA_DIR",
+  "span": [
+    "2020-01-01",
+    "2026-07-22"
+  ],
+  "universe_n": 200,
+  "vol_lookback_days": 30,
+  "windows": [
+    {
+      "window": "2026 only",
+      "days": 203,
+      "min_obs": 111,
+      "symbols": 136,
+      "vol_btc": 0.024983969666861547,
+      "vol_eth": 0.03361648439465959,
+      "vol_median": 0.05191304201670145,
+      "vol_q25": 0.04274848678248299,
+      "vol_q75": 0.08864377187043654,
+      "pairwise_median": 0.29053829788393726,
+      "pairwise_mean": 0.3103250759710606,
+      "pairwise_q25": 0.10158343092248606,
+      "pairwise_q75": 0.5043201175067784,
+      "pairwise_low_cluster_median": 0.1587825659170405,
+      "pairwise_high_cluster_median": 0.6085902393680163,
+      "pairwise_low_cluster_share": 0.6960544917105771,
+      "n_pairs": 7781,
+      "dispersion_measured": 0.06595778007481078,
+      "dispersion_implied_one_factor": 0.043726121459971394,
+      "dispersion_ratio": 1.5084296953982328,
+      "matched_available": true,
+      "matched_symbols": 65,
+      "matched_days": 191,
+      "matched_dropped_symbols": 71,
+      "cs_dispersion_measured_rms": 0.05138265562216732,
+      "cs_dispersion_predicted_cov": 0.051419006165651135,
+      "cs_dispersion_predicted_equicorr": 0.04287276443929588,
+      "cs_dispersion_ratio_cov": 0.9992930523906528,
+      "cs_dispersion_ratio_equicorr": 1.1984917766364402,
+      "corr_mean_offdiagonal": 0.49956043253699794,
+      "corr_median_offdiagonal": 0.5266446535126944,
+      "breadth_from_corr_matrix": 1.9713775581708883,
+      "breadth_from_mean_corr": 1.9713775581708883,
+      "breadth_from_median_corr": 1.872915058810726,
+      "residual_participation_ratio": 8.503916814274254,
+      "independence_bound_n_minus_1": 64.0,
+      "residual_rank": 64,
+      "start": "2026-01-01",
+      "end": "2026-07-22"
+    },
+    {
+      "window": "2024-2025",
+      "days": 731,
+      "min_obs": 402,
+      "symbols": 131,
+      "vol_btc": 0.02490834721777179,
+      "vol_eth": 0.0363954402918407,
+      "vol_median": 0.05872192908970257,
+      "vol_q25": 0.05091041479567249,
+      "vol_q75": 0.06816808191204057,
+      "pairwise_median": 0.5981310254338035,
+      "pairwise_mean": 0.5817141370893243,
+      "pairwise_q25": 0.5251716691760209,
+      "pairwise_q75": 0.6649641029253256,
+      "pairwise_low_cluster_median": 0.34113019176508885,
+      "pairwise_high_cluster_median": 0.6130798595324186,
+      "pairwise_low_cluster_share": 0.1284176847004072,
+      "n_pairs": 6876,
+      "dispersion_measured": 0.034045216320710725,
+      "dispersion_implied_one_factor": 0.037225672618593796,
+      "dispersion_ratio": 0.9145628252182482,
+      "matched_available": true,
+      "matched_symbols": 51,
+      "matched_days": 612,
+      "matched_dropped_symbols": 80,
+      "cs_dispersion_measured_rms": 0.035761888170363555,
+      "cs_dispersion_predicted_cov": 0.03575629622899027,
+      "cs_dispersion_predicted_equicorr": 0.03466332839984063,
+      "cs_dispersion_ratio_cov": 1.0001563903973016,
+      "cs_dispersion_ratio_equicorr": 1.0316922759941303,
+      "corr_mean_offdiagonal": 0.5995517554881428,
+      "corr_median_offdiagonal": 0.6075447812356141,
+      "breadth_from_corr_matrix": 1.6463515613741508,
+      "breadth_from_mean_corr": 1.6463515613741508,
+      "breadth_from_median_corr": 1.625382013362704,
+      "residual_participation_ratio": 22.34675494548357,
+      "independence_bound_n_minus_1": 50.0,
+      "residual_rank": 50,
+      "start": "2024-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "window": "full sample",
+      "days": 2395,
+      "min_obs": 1317,
+      "symbols": 97,
+      "vol_btc": 0.03242893308808458,
+      "vol_eth": 0.04344613374817382,
+      "vol_median": 0.06122334814587931,
+      "vol_q25": 0.05619357889581924,
+      "vol_q75": 0.06775887010353168,
+      "pairwise_median": 0.5860945898199931,
+      "pairwise_mean": 0.5808129691002929,
+      "pairwise_q25": 0.5350191100770771,
+      "pairwise_q75": 0.6291752724021709,
+      "pairwise_low_cluster_median": 0.41174752996034764,
+      "pairwise_high_cluster_median": 0.5898894734746408,
+      "pairwise_low_cluster_share": 0.04924848097217781,
+      "n_pairs": 3127,
+      "dispersion_measured": 0.031623884251499236,
+      "dispersion_implied_one_factor": 0.039388335448763474,
+      "dispersion_ratio": 0.8028743507741202,
+      "matched_available": true,
+      "matched_symbols": 12,
+      "matched_days": 2338,
+      "matched_dropped_symbols": 85,
+      "cs_dispersion_measured_rms": 0.02900518334605577,
+      "cs_dispersion_predicted_cov": 0.02900546095771745,
+      "cs_dispersion_predicted_equicorr": 0.028433460983175122,
+      "cs_dispersion_ratio_cov": 0.9999904289863869,
+      "cs_dispersion_ratio_equicorr": 1.0201073785290842,
+      "corr_mean_offdiagonal": 0.6598340933421577,
+      "corr_median_offdiagonal": 0.655561944110857,
+      "breadth_from_corr_matrix": 1.4531055543276168,
+      "breadth_from_mean_corr": 1.4531055543276172,
+      "breadth_from_median_corr": 1.4614218633144134,
+      "residual_participation_ratio": 8.7590567318165,
+      "independence_bound_n_minus_1": 11.0,
+      "residual_rank": 11,
+      "start": "2020-01-01",
+      "end": "2026-07-22"
+    }
+  ],
+  "matched_cohort": {
+    "matched_cohort_available": true,
+    "matched_cohort_names": 63,
+    "matched_cohort_entrants": 73,
+    "matched_cohort_old_window": "2024-2025",
+    "matched_cohort_new_window": "2026 only",
+    "matched_cohort_rho_old": 0.6095827993368614,
+    "matched_cohort_rho_new": 0.5724500936000142,
+    "matched_cohort_change_pct": -6.091494999078428,
+    "matched_cohort_pairs_old": 1902,
+    "matched_cohort_pairs_new": 1941,
+    "entrants_among_themselves_rho": 0.14853395517366874,
+    "entrants_pairs": 1609,
+    "common_versus_entrants_rho": 0.25160072100656156,
+    "cross_pairs": 4231,
+    "pair_weighted_blend_new_window": 0.3103250759710606,
+    "pair_weighted_blend_pairs": 7781,
+    "min_obs_rule_new": 111,
+    "min_obs_rule_old": 402
+  },
+  "funding": {
+    "available": true,
+    "symbols": 480,
+    "settlements": 422326,
+    "settlements_without_stated_interval": 0,
+    "interval_hours_share": {
+      "1.0": 0.03778124008467393,
+      "4.0": 0.832127313970724,
+      "8.0": 0.13009144594460204
+    },
+    "mean_signed_bps_per_day": -13.212004299048603,
+    "median_signed_bps_per_day": 3.0,
+    "mean_abs_bps_per_day": 20.927656326155624,
+    "median_abs_bps_per_day": 3.0,
+    "q90_abs_bps_per_day": 24.6726,
+    "q99_abs_bps_per_day": 398.6115,
+    "per_symbol_mean_abs_median": 8.090001843317971,
+    "symbol_day_available": true,
+    "symbol_days": 77647,
+    "symbol_day_mean_signed_bps": -4.951527770551341,
+    "symbol_day_median_signed_bps": 2.2891,
+    "symbol_day_mean_abs_bps": 11.493979713317964,
+    "symbol_day_median_abs_bps": 3.0,
+    "symbol_day_q90_abs_bps": 17.605960000000007,
+    "symbol_day_q99_abs_bps": 181.8565219999989,
+    "interval_share_by_symbol_available": true,
+    "interval_symbols_counted": 480,
+    "interval_share_by_exposure": {
+      "1.0": 0.008572963679346658,
+      "4.0": 0.7552740167633785,
+      "8.0": 0.23615301955727488
+    },
+    "interval_share_by_symbol": {
+      "4.0": 0.7375,
+      "8.0": 0.2625
+    }
+  },
+  "ticks": {
+    "BTCUSDT": {
+      "tick_abs": 0.09999999999126885,
+      "price_last": 66082.0,
+      "price_median": 70687.05,
+      "tick_bps": 0.015132713899589728,
+      "tick_bps_at_median_price": 0.014146862825831443
+    },
+    "ETHUSDT": {
+      "tick_abs": 0.009999999999990905,
+      "price_last": 1933.31,
+      "price_median": 1794.935,
+      "tick_bps": 0.051724762195358764,
+      "tick_bps_at_median_price": 0.05571232384454537
+    },
+    "SOLUSDT": {
+      "tick_abs": 0.009999999999990905,
+      "price_last": 77.93,
+      "price_median": 86.94,
+      "tick_bps": 1.2832028743732713,
+      "tick_bps_at_median_price": 1.150218541521843
+    },
+    "XRPUSDT": {
+      "tick_abs": 9.999999999976694e-05,
+      "price_last": 1.1415,
+      "price_median": 1.1509,
+      "tick_bps": 0.8760402978516596,
+      "tick_bps_at_median_price": 0.8688852202603783
+    },
+    "DOGEUSDT": {
+      "tick_abs": 9.999999999982245e-06,
+      "price_last": 0.07296,
+      "price_median": 0.09468,
+      "tick_bps": 1.370614035085286,
+      "tick_bps_at_median_price": 1.0561892691151504
+    },
+    "ADAUSDT": {
+      "tick_abs": 9.999999999998899e-05,
+      "price_last": 0.1742,
+      "price_median": 0.253,
+      "tick_bps": 5.740528128587198,
+      "tick_bps_at_median_price": 3.952569169960039
+    },
+    "LINKUSDT": {
+      "tick_abs": 0.0009999999999994458,
+      "price_last": 8.628,
+      "price_median": 9.161,
+      "tick_bps": 1.1590171534532288,
+      "tick_bps_at_median_price": 1.091583888221205
+    },
+    "AVAXUSDT": {
+      "tick_abs": 0.0009999999999994458,
+      "price_last": 6.623,
+      "price_median": 9.18,
+      "tick_bps": 1.5098897780453657,
+      "tick_bps_at_median_price": 1.0893246187357797
+    }
+  },
+  "spread_estimators_bps": {
+    "BTCUSDT": {
+      "roll_1m_bps": 1.7701382070121714,
+      "corwin_schultz_1m_bps": 0.14597602429607479,
+      "corwin_schultz_1d_bps": 42.02319382990111,
+      "minute_bars": 292320
+    },
+    "ETHUSDT": {
+      "roll_1m_bps": 2.3112795204616625,
+      "corwin_schultz_1m_bps": 0.33151893266543947,
+      "corwin_schultz_1d_bps": NaN,
+      "minute_bars": 31680
+    },
+    "SOLUSDT": {
+      "roll_1m_bps": 2.77238729508711,
+      "corwin_schultz_1m_bps": 1.1282353315537657,
+      "corwin_schultz_1d_bps": 40.1338827354815,
+      "minute_bars": 161280
+    },
+    "XRPUSDT": {
+      "roll_1m_bps": 2.6129570783412417,
+      "corwin_schultz_1m_bps": 0.6833110949578014,
+      "corwin_schultz_1d_bps": 31.758962305023065,
+      "minute_bars": 119520
+    },
+    "DOGEUSDT": {
+      "roll_1m_bps": 3.5438217517286237,
+      "corwin_schultz_1m_bps": 0.9275578514361287,
+      "corwin_schultz_1d_bps": 73.2934666042683,
+      "minute_bars": 252000
+    },
+    "ADAUSDT": {
+      "roll_1m_bps": 5.164133918694783,
+      "corwin_schultz_1m_bps": 2.7022973350655355,
+      "corwin_schultz_1d_bps": 103.4413966560311,
+      "minute_bars": 292320
+    },
+    "LINKUSDT": {
+      "roll_1m_bps": 2.619225391936917,
+      "corwin_schultz_1m_bps": 0.5250516089183455,
+      "corwin_schultz_1d_bps": 82.60496299860952,
+      "minute_bars": 207360
+    },
+    "AVAXUSDT": {
+      "roll_1m_bps": 1.24706675924044,
+      "corwin_schultz_1m_bps": 0.7399224624516597,
+      "corwin_schultz_1d_bps": 92.17936248117692,
+      "minute_bars": 292320
+    },
+    "_rank_corr_roll_vs_tick": 0.5000000000000001
+  },
+  "guess_vs_measured": {
+    "BTC daily vol": {
+      "assumed": 0.025,
+      "measured": 0.024983969666861547,
+      "rel_error": -0.0006412133255381258
+    },
+    "ETH daily vol": {
+      "assumed": 0.035,
+      "measured": 0.03361648439465959,
+      "rel_error": -0.03952901729544034
+    },
+    "alt daily vol (median)": {
+      "assumed": 0.06,
+      "measured": 0.05191304201670145,
+      "rel_error": -0.13478263305497573
+    },
+    "pairwise correlation": {
+      "assumed": 0.55,
+      "measured": 0.29053829788393726,
+      "rel_error": -0.47174854930193233
+    },
+    "dispersion": {
+      "assumed": 0.0402,
+      "measured": 0.06595778007481078,
+      "rel_error": 0.640740797880865
+    },
+    "funding_bps_per_day": {
+      "assumed": 3.0,
+      "measured": 3.0,
+      "rel_error": 0.0
+    },
+    "btc_tick_bps": {
+      "assumed": 0.0105,
+      "measured": 0.015132713899589728,
+      "rel_error": 0.4412108475799741
+    }
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "kappa": 3.0,
+  "instruments": [
+    {
+      "name": "BTCUSDT perp",
+      "sigma_daily": 0.025,
+      "tick_bps": 0.0151,
+      "spread_bps": 0.0151,
+      "note": "2026: 2.50%/day, tick $0.10 at $66k = 0.0151 bps",
+      "taker_floor": {
+        "100 ms": 4.2325201362025435,
+        "1 s": 1.338440387292613,
+        "10 s": 0.42325201362025433,
+        "1 min": 0.1727919109958565,
+        "5 min": 0.0772748917897657,
+        "1 h": 0.022307339788210215,
+        "8 h": 0.007886835617237962,
+        "1 day": 0.004553466666666666
+      },
+      "maker_skew_floor": {
+        "100 ms": 0.01871425552887424,
+        "1 s": 0.005917967218564159,
+        "10 s": 0.0018714255528874237,
+        "1 min": 0.0007640062826966804,
+        "5 min": 0.00034167399666933974,
+        "1 h": 9.86327869760693e-05,
+        "8 h": 3.487195625905339e-05,
+        "1 day": 2.0133333333333333e-05
+      },
+      "maker_taker_floor": {
+        "100 ms": 2.1162600681012718,
+        "1 s": 0.6692201936463065,
+        "10 s": 0.21162600681012717,
+        "1 min": 0.08639595549792825,
+        "5 min": 0.03863744589488285,
+        "1 h": 0.011153669894105107,
+        "8 h": 0.003943417808618981,
+        "1 day": 0.002276733333333333
+      }
+    },
+    {
+      "name": "ETHUSDT perp",
+      "sigma_daily": 0.0336,
+      "tick_bps": 0.0517,
+      "spread_bps": 0.0517,
+      "note": "2026: 3.36%/day, tick $0.01 at $1.93k = 0.0517 bps",
+      "taker_floor": {
+        "100 ms": 3.1829468133581287,
+        "1 s": 1.0065361601386542,
+        "10 s": 0.3182946813358129,
+        "1 min": 0.12994325951908564,
+        "5 min": 0.05811239230051443,
+        "1 h": 0.016775602668977572,
+        "8 h": 0.0059310712028625935,
+        "1 day": 0.0034243055555555554
+      },
+      "maker_skew_floor": {
+        "100 ms": 0.0476745807140294,
+        "1 s": 0.015076026154986941,
+        "10 s": 0.00476745807140294,
+        "1 min": 0.0019463066075083954,
+        "5 min": 0.0008704147758891549,
+        "1 h": 0.00025126710258311567,
+        "8 h": 8.88363360628085e-05,
+        "1 day": 5.1289682539682545e-05
+      },
+      "maker_taker_floor": {
+        "100 ms": 1.5914734066790643,
+        "1 s": 0.5032680800693271,
+        "10 s": 0.15914734066790645,
+        "1 min": 0.06497162975954282,
+        "5 min": 0.029056196150257216,
+        "1 h": 0.008387801334488786,
+        "8 h": 0.0029655356014312967,
+        "1 day": 0.0017121527777777777
+      }
+    },
+    {
+      "name": "mid-cap alt perp",
+      "sigma_daily": 0.0519,
+      "tick_bps": 1.28,
+      "spread_bps": 3.0,
+      "note": "2026 median vol and SOL-like tick; spread still an assumption",
+      "taker_floor": {
+        "100 ms": 3.8207465766053903,
+        "1 s": 1.208226154436404,
+        "10 s": 0.382074657660539,
+        "1 min": 0.15598132581948077,
+        "5 min": 0.06975696955058042,
+        "1 h": 0.020137102573940066,
+        "8 h": 0.0071195408917410505,
+        "1 day": 0.0041104688503532435
+      },
+      "maker_skew_floor": {
+        "100 ms": 0.7641493153210781,
+        "1 s": 0.24164523088728082,
+        "10 s": 0.07641493153210781,
+        "1 min": 0.031196265163896154,
+        "5 min": 0.013951393910116083,
+        "1 h": 0.004027420514788014,
+        "8 h": 0.0014239081783482103,
+        "1 day": 0.0008220937700706488
+      },
+      "maker_taker_floor": {
+        "100 ms": 1.9103732883026951,
+        "1 s": 0.604113077218202,
+        "10 s": 0.1910373288302695,
+        "1 min": 0.07799066290974038,
+        "5 min": 0.03487848477529021,
+        "1 h": 0.010068551286970033,
+        "8 h": 0.0035597704458705253,
+        "1 day": 0.0020552344251766217
+      }
+    }
+  ],
+  "fee_tiers": [
+    [
+      "VIP 0 (retail)",
+      2.0,
+      5.0
+    ],
+    [
+      "VIP 4",
+      1.2,
+      3.0
+    ],
+    [
+      "VIP 9",
+      0.0,
+      1.7
+    ],
+    [
+      "market-maker program",
+      -0.5,
+      1.7
+    ]
+  ],
+  "conventions": [
+    {
+      "instrument": "BTCUSDT perp",
+      "horizon": "1 s",
+      "kappa_sd_move_bps": 2.551551815399144,
+      "cost_bps": 3.4151,
+      "floor_total_vol": 1.338440387292613,
+      "floor_residual_vol": 0.8010990787526608,
+      "unreachable": true
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "horizon": "10 s",
+      "kappa_sd_move_bps": 8.068715304598786,
+      "cost_bps": 3.4151,
+      "floor_total_vol": 0.42325201362025433,
+      "floor_residual_vol": 0.3897767493334948,
+      "unreachable": false
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "horizon": "1 min",
+      "kappa_sd_move_bps": 19.764235376052373,
+      "cost_bps": 3.4151,
+      "floor_total_vol": 0.1727919109958565,
+      "floor_residual_vol": 0.17026874529208874,
+      "unreachable": false
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "horizon": "5 min",
+      "kappa_sd_move_bps": 44.19417382415923,
+      "cost_bps": 3.4151,
+      "floor_total_vol": 0.0772748917897657,
+      "floor_residual_vol": 0.07704519997885532,
+      "unreachable": false
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "horizon": "1 s",
+      "kappa_sd_move_bps": 3.4292856398964493,
+      "cost_bps": 3.4516999999999998,
+      "floor_total_vol": 1.0065361601386542,
+      "floor_residual_vol": 0.7094063715168062,
+      "unreachable": true
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "horizon": "10 s",
+      "kappa_sd_move_bps": 10.844353369380768,
+      "cost_bps": 3.4516999999999998,
+      "floor_total_vol": 0.3182946813358129,
+      "floor_residual_vol": 0.3033013153535208,
+      "unreachable": false
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "horizon": "1 min",
+      "kappa_sd_move_bps": 26.563132345414388,
+      "cost_bps": 3.4516999999999998,
+      "floor_total_vol": 0.12994325951908564,
+      "floor_residual_vol": 0.12885989774526718,
+      "unreachable": false
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "horizon": "5 min",
+      "kappa_sd_move_bps": 59.396969619669996,
+      "cost_bps": 3.4516999999999998,
+      "floor_total_vol": 0.05811239230051443,
+      "floor_residual_vol": 0.058014515899757486,
+      "unreachable": false
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "horizon": "1 s",
+      "kappa_sd_move_bps": 5.297021568768622,
+      "cost_bps": 6.4,
+      "floor_total_vol": 1.208226154436404,
+      "floor_residual_vol": 0.7703665417460137,
+      "unreachable": true
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "horizon": "10 s",
+      "kappa_sd_move_bps": 16.750652972347076,
+      "cost_bps": 6.4,
+      "floor_total_vol": 0.382074657660539,
+      "floor_residual_vol": 0.35691065695519836,
+      "unreachable": false
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "horizon": "1 min",
+      "kappa_sd_move_bps": 41.030552640684725,
+      "cost_bps": 6.4,
+      "floor_total_vol": 0.15598132581948077,
+      "floor_residual_vol": 0.15411773737197637,
+      "unreachable": false
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "horizon": "5 min",
+      "kappa_sd_move_bps": 91.74710485895454,
+      "cost_bps": 6.4,
+      "floor_total_vol": 0.06975696955058042,
+      "floor_residual_vol": 0.06958786652611593,
+      "unreachable": false
+    }
+  ],
+  "min_horizons": [
+    {
+      "instrument": "BTCUSDT perp",
+      "style": "taker/taker, VIP 0",
+      "cost_bps": 10.0151,
+      "min_horizon_days": {
+        "ic_3pct": 0.1981278577975309,
+        "ic_10pct": 0.017831507201777775,
+        "ic_20pct": 0.004457876800444444
+      }
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "style": "taker/taker, VIP 9",
+      "cost_bps": 3.4151,
+      "min_horizon_days": {
+        "ic_3pct": 0.023037842982716043,
+        "ic_10pct": 0.002073405868444444,
+        "ic_20pct": 0.000518351467111111
+      }
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "style": "maker in, taker out, VIP 9",
+      "cost_bps": 1.70755,
+      "min_horizon_days": {
+        "ic_3pct": 0.005759460745679011,
+        "ic_10pct": 0.000518351467111111,
+        "ic_20pct": 0.00012958786677777774
+      }
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "style": "maker/maker, MM programme",
+      "cost_bps": 0.0,
+      "min_horizon_days": {
+        "ic_3pct": 0.0,
+        "ic_10pct": 0.0,
+        "ic_20pct": 0.0
+      }
+    },
+    {
+      "instrument": "BTCUSDT perp",
+      "style": "quote skew (one tick)",
+      "cost_bps": 0.0151,
+      "min_horizon_days": {
+        "ic_3pct": 4.5039012345679017e-07,
+        "ic_10pct": 4.05351111111111e-08,
+        "ic_20pct": 1.0133777777777775e-08
+      }
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "style": "taker/taker, VIP 0",
+      "cost_bps": 10.0517,
+      "min_horizon_days": {
+        "ic_3pct": 0.11048808921266555,
+        "ic_10pct": 0.009943928029139897,
+        "ic_20pct": 0.002485982007284974
+      }
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "style": "taker/taker, VIP 9",
+      "cost_bps": 3.4516999999999998,
+      "min_horizon_days": {
+        "ic_3pct": 0.013028742819787383,
+        "ic_10pct": 0.0011725868537808641,
+        "ic_20pct": 0.00029314671344521603
+      }
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "style": "maker in, taker out, VIP 9",
+      "cost_bps": 1.7258499999999999,
+      "min_horizon_days": {
+        "ic_3pct": 0.003257185704946846,
+        "ic_10pct": 0.00029314671344521603,
+        "ic_20pct": 7.328667836130401e-05
+      }
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "style": "maker/maker, MM programme",
+      "cost_bps": 0.0,
+      "min_horizon_days": {
+        "ic_3pct": 0.0,
+        "ic_10pct": 0.0,
+        "ic_20pct": 0.0
+      }
+    },
+    {
+      "instrument": "ETHUSDT perp",
+      "style": "quote skew (one tick)",
+      "cost_bps": 0.0517,
+      "min_horizon_days": {
+        "ic_3pct": 2.9229239278015745e-06,
+        "ic_10pct": 2.6306315350214165e-07,
+        "ic_20pct": 6.576578837553541e-08
+      }
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "style": "taker/taker, VIP 0",
+      "cost_bps": 13.0,
+      "min_horizon_days": {
+        "ic_3pct": 0.0774581232281741,
+        "ic_10pct": 0.006971231090535667,
+        "ic_20pct": 0.0017428077726339168
+      }
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "style": "taker/taker, VIP 9",
+      "cost_bps": 6.4,
+      "min_horizon_days": {
+        "ic_3pct": 0.0187732824108048,
+        "ic_10pct": 0.0016895954169724317,
+        "ic_20pct": 0.00042239885424310794
+      }
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "style": "maker in, taker out, VIP 9",
+      "cost_bps": 3.2,
+      "min_horizon_days": {
+        "ic_3pct": 0.0046933206027012,
+        "ic_10pct": 0.00042239885424310794,
+        "ic_20pct": 0.00010559971356077698
+      }
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "style": "maker/maker, MM programme",
+      "cost_bps": 0.0,
+      "min_horizon_days": {
+        "ic_3pct": 0.0,
+        "ic_10pct": 0.0,
+        "ic_20pct": 0.0
+      }
+    },
+    {
+      "instrument": "mid-cap alt perp",
+      "style": "quote skew (one tick)",
+      "cost_bps": 1.28,
+      "min_horizon_days": {
+        "ic_3pct": 0.0007509312964321922,
+        "ic_10pct": 6.758381667889729e-05,
+        "ic_20pct": 1.689595416972432e-05
+      }
+    }
+  ],
+  "estimation": [
+    {
+      "ic": 0.004,
+      "horizon": "1 s",
+      "n": 562483.0001439999,
+      "days_one_symbol": 6.510219909074073,
+      "hours_one_symbol": 156.24527781777775,
+      "symbol_days": 6.510219909074073
+    },
+    {
+      "ic": 0.004,
+      "horizon": "1 min",
+      "n": 562483.0001439999,
+      "days_one_symbol": 390.61319454444435,
+      "hours_one_symbol": 9374.716669066664,
+      "symbol_days": 390.61319454444435
+    },
+    {
+      "ic": 0.004,
+      "horizon": "1 h",
+      "n": 562483.0001439999,
+      "days_one_symbol": 23436.791672666663,
+      "hours_one_symbol": 562483.0001439999,
+      "symbol_days": 23436.791672666663
+    },
+    {
+      "ic": 0.01,
+      "horizon": "1 s",
+      "n": 89983.00089999998,
+      "days_one_symbol": 1.0414699178240738,
+      "hours_one_symbol": 24.995278027777772,
+      "symbol_days": 1.0414699178240738
+    },
+    {
+      "ic": 0.01,
+      "horizon": "1 min",
+      "n": 89983.00089999998,
+      "days_one_symbol": 62.48819506944442,
+      "hours_one_symbol": 1499.716681666666,
+      "symbol_days": 62.48819506944442
+    },
+    {
+      "ic": 0.01,
+      "horizon": "1 h",
+      "n": 89983.00089999998,
+      "days_one_symbol": 3749.291704166666,
+      "hours_one_symbol": 89983.00089999998,
+      "symbol_days": 3749.291704166666
+    },
+    {
+      "ic": 0.03,
+      "horizon": "1 s",
+      "n": 9983.008100000003,
+      "days_one_symbol": 0.11554407523148151,
+      "hours_one_symbol": 2.773057805555556,
+      "symbol_days": 0.11554407523148151
+    },
+    {
+      "ic": 0.03,
+      "horizon": "1 min",
+      "n": 9983.008100000003,
+      "days_one_symbol": 6.9326445138888895,
+      "hours_one_symbol": 166.38346833333335,
+      "symbol_days": 6.9326445138888895
+    },
+    {
+      "ic": 0.03,
+      "horizon": "1 h",
+      "n": 9983.008100000003,
+      "days_one_symbol": 415.95867083333343,
+      "hours_one_symbol": 9983.008100000003,
+      "symbol_days": 415.95867083333343
+    },
+    {
+      "ic": 0.1,
+      "horizon": "1 s",
+      "n": 883.0899999999997,
+      "days_one_symbol": 0.01022094907407407,
+      "hours_one_symbol": 0.2453027777777777,
+      "symbol_days": 0.01022094907407407
+    },
+    {
+      "ic": 0.1,
+      "horizon": "1 min",
+      "n": 883.0899999999997,
+      "days_one_symbol": 0.6132569444444441,
+      "hours_one_symbol": 14.71816666666666,
+      "symbol_days": 0.6132569444444441
+    },
+    {
+      "ic": 0.1,
+      "horizon": "1 h",
+      "n": 883.0899999999997,
+      "days_one_symbol": 36.795416666666654,
+      "hours_one_symbol": 883.0899999999997,
+      "symbol_days": 36.795416666666654
+    }
+  ],
+  "caveats": [
+    "Adverse selection, not the tick, is a maker's real cost. The bound in section 2 asks only whether the forecast can move a quote; it does not ask whether the flow behind a fill is informed. E[move | filled] is the number that kills making books, and it is far larger than sigma times sqrt(tau) for toxic flow.",
+    "Queue position is not in the model at all. A 0.5% IC that says 'lift the bid' is worth nothing 200 lots deep in the queue, where the fill never arrives on the intended side.",
+    "On BTC and ETH perps the quoted spread is smaller than the fee. One tick on BTCUSDT is about 0.0151 bps while the VIP 0 maker fee is 2 bps per side -- about 132x the tick on one side and 264x on a two-sided round trip. Passive making on majors is not a strategy until the maker fee is at or below zero, which is a business-development problem, not a research problem.",
+    "Latency is an IC multiplier. A signal with a 200 ms half-life measured offline has an effective IC of nearly zero when the round-trip reaction is 500 ms. Measure IC against the return starting from the first moment action was possible.",
+    "Perp funding is a real carry on inventory: predominantly 4-hourly on the 2026 record, with 8-hour and occasional 1-hour states, and at extremes it annualises into three figures. A making book that is systematically long in a positive-funding regime is paying for the privilege.",
+    "Two readings of sigma exist and they diverge as the floor approaches 1. Total (measured) volatility makes rho = beta/(sigma sqrt(tau)) exact and lets the floor exceed 100%, which means the kappa=3 criterion cannot be met at any correlation, though a rare tail edge survives. The thread's literal model treats sigma as residual, giving an exact floor a/sqrt(1+a^2) that is always under 100% -- but only because it lets total volatility inflate to sigma/sqrt(1-rho^2), contradicting the figure that was measured. Section 1b reports both.",
+    "Perp funding intervals are venue- and symbol-dependent (Binance uses 4 and 8 hour settlement depending on the contract, and can change the interval), and fee schedules are revised periodically. Every fee, tick, spread and funding figure in this file is an assumption to be replaced with the venue's current published schedule.",
+    "Crypto volatility is regime-switching, so a single sigma is a fiction. The floor is proportional to 1/sigma, which means it *falls* when volatility spikes -- and that is exactly when spreads widen and adverse selection worsens. Counterexample C in README.md is this failure mode.",
+    "These are necessary conditions on a single signal in isolation. A portfolio of weak, decorrelated signals clears the bar that none of them clears alone -- that is the breadth argument, and it is the whole reason anyone runs dozens of features."
+  ]
+}

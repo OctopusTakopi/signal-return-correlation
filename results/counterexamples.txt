@@ -1,0 +1,80 @@
+=== A. Signal shape: correlation cannot see the tails of x ===
+all rows have rho = 0.556% (exactly the floor)
+Gaussian alpha at this rho: net 0.0013 bps/day, trades 0.27% of days
+   fires  |x| when firing  band k  clears by   net sim     +/-  net closed  vs Gaussian
+---------------------------------------------------------------------------------------
+ 50.000%             1.41    3.00      0.47x    0.0000  0.0000      0.0000         0.0x
+ 10.000%             3.16    3.00      1.05x   -0.0014  0.0212      0.0271        21.2x
+  2.778%             6.00    3.00      2.00x    0.1434  0.0112      0.1389       109.0x
+  1.000%            10.00    3.00      3.33x    0.1146  0.0067      0.1167        91.6x
+  0.100%            31.62    3.00     10.54x    0.0433  0.0021      0.0477        37.4x
+optimal sparsity 1/(4*kappa^2) = 0.02778, net 0.1389 bps = 109x the Gaussian alpha
+
+=== B. Encoding: the same information scores exactly 0% or 1.67% ===
+relationship: E[y|z] = a (z^2 - 1), a chosen so the re-encoded alpha sits at 3x the floor
+floor = 0.556%
+  Corr(z, y)  = -0.0595% measured (t =  -1.68), population exactly 0.0000%  ->  net -1.6579 bps (pure cost bleed)
+  Corr(x, y)  = +1.7526% measured, population 1.6664% (bootstrap se 0.0405%, z = +2.13)  ->  net 0.7482 bps
+  a screen on Pearson correlation discards this alpha at t = 0; the floor is not scale- or encoding-invariant
+
+=== C. Conditioning: identical pooled correlation, 7.4 bps vs 0.9 bps vs 0 ===
+pooled floor 2.460%  |  calm-state floor 1.000%  |  stressed-state floor 3.333%
+all three alphas built at rho = 4.919% (2.0x the pooled floor)
+alpha                                   rho pooled  x cond floor   net sim     +/-  net closed
+----------------------------------------------------------------------------------------------
+A: edge in the calm state                   4.879%         22.0x    7.3379  0.0240      7.3582
+B: edge in the stressed state               4.928%          2.2x    0.9251  0.0312      0.8735
+C: edge only while the name is halted       4.915%          2.2x    0.0000  0.0000      0.0000
+  the pooled floor uses an average sigma and an average cost. Both averages are taken over states the alpha does not weight equally, so the floor prices an alpha nobody holds.
+
+=== D. Estimation: at these correlations, noise wins a coin flip ===
+real alpha at 2x the floor = 1.111%, floor = 0.556%
+sample                             N       se   exp t  P(noise wins)  P(junk > floor)
+-------------------------------------------------------------------------------------
+1 name, 2 years daily            504   4.458%    0.25          43.1%            45.1%
+1 name, 10 years daily         2,520   1.992%    0.56          34.7%            39.0%
+100 names, 2 years daily      50,400   0.445%    2.49           3.9%            10.7%
+500 names, 2 years daily     252,000   0.199%    5.58           0.0%             0.3%
+
+multiple testing -- best correlation found by searching pure noise:
+    N obs  candidates  best junk rho   x floor
+      504           1        -0.082%     -0.1x
+      504         100        11.189%     20.1x
+      504       1,000        14.451%     26.0x
+      504     100,000        19.548%     35.2x
+    2,520           1         0.009%      0.0x
+    2,520         100         4.999%      9.0x
+    2,520       1,000         6.458%     11.6x
+    2,520     100,000         8.738%     15.7x
+  252,000           1         0.000%      0.0x
+  252,000         100         0.500%      0.9x
+  252,000       1,000         0.646%      1.2x
+  252,000     100,000         0.873%      1.6x
+  the correlations the thread calls easy to find are also nearly impossible to measure on one name. Breadth is what makes a small correlation both tradable and visible -- the same sqrt(N) appears in the IR and in the standard error.
+
+=== E. Breadth: crowding caps IR at rho / sqrt(rho_alpha) * sqrt(252) ===
+  names  alpha corr    BR_eff  IR if indep  IR actual  haircut
+--------------------------------------------------------------
+     10        0.00      10.0         0.56       0.56    1.00x
+     10        0.02       8.5         0.56       0.51    0.92x
+     10        0.05       6.9         0.56       0.46    0.83x
+     10        0.10       5.3         0.56       0.40    0.73x
+     10        0.30       2.7         0.56       0.29    0.52x
+    100        0.00     100.0         1.76       1.76    1.00x
+    100        0.02      33.6         1.76       1.02    0.58x
+    100        0.05      16.8         1.76       0.72    0.41x
+    100        0.10       9.2         1.76       0.53    0.30x
+    100        0.30       3.3         1.76       0.32    0.18x
+    500        0.00     500.0         3.94       3.94    1.00x
+    500        0.02      45.5         3.94       1.19    0.30x
+    500        0.05      19.3         3.94       0.77    0.20x
+    500        0.10       9.8         3.94       0.55    0.14x
+    500        0.30       3.3         3.94       0.32    0.08x
+  2,000        0.00    2000.0         7.89       7.89    1.00x
+  2,000        0.02      48.8         7.89       1.23    0.16x
+  2,000        0.05      19.8         7.89       0.78    0.10x
+  2,000        0.10      10.0         7.89       0.56    0.07x
+  2,000        0.30       3.3         7.89       0.32    0.04x
+  BR_eff -> 1/rho_alpha as N -> infinity, so with 10% alpha correlation no number of names buys more than 10 independent bets per day
+
+wrote results/counterexamples.json

@@ -1,0 +1,444 @@
+{
+  "seed": 811912,
+  "n_assets": 200,
+  "total_vol_daily": 0.0519,
+  "market_corr": 0.5570457790882182,
+  "dispersion_daily": 0.066,
+  "cost_vip0_bps": 13.000000000000002,
+  "cost_vip9_bps": 6.4,
+  "orthogonality": [
+    {
+      "signal": "market timing only",
+      "ic_ts_target": 0.04,
+      "ic_cs_target": 0.0,
+      "pooled_ic": 0.014787679786829027,
+      "time_series_ic": 0.0486233867628068,
+      "common_component_ic": 0.0486233867628068,
+      "time_series_ic_se": 0.007054526520132414,
+      "time_series_ic_tstat": 6.892508891141589,
+      "cross_sectional_ic": 0.001273233885068787,
+      "cross_sectional_ic_se": 0.0005024549486517001,
+      "cross_sectional_ic_sd": 0.07105786028647114,
+      "cross_sectional_ic_tstat": 2.534025962895607,
+      "n_dates": 20000,
+      "n_assets": 200
+    },
+    {
+      "signal": "mostly timing",
+      "ic_ts_target": 0.04,
+      "ic_cs_target": 0.02,
+      "pooled_ic": 0.025063193161439852,
+      "time_series_ic": 0.0399508419684664,
+      "common_component_ic": 0.0399508419684664,
+      "time_series_ic_se": 0.0070599583954273045,
+      "time_series_ic_tstat": 5.658792832878779,
+      "cross_sectional_ic": 0.020881610137453828,
+      "cross_sectional_ic_se": 0.0004992302635226683,
+      "cross_sectional_ic_sd": 0.07060182094208518,
+      "cross_sectional_ic_tstat": 41.8276127534998,
+      "n_dates": 20000,
+      "n_assets": 200
+    },
+    {
+      "signal": "balanced",
+      "ic_ts_target": 0.03,
+      "ic_cs_target": 0.03,
+      "pooled_ic": 0.03162343895953326,
+      "time_series_ic": 0.0435466971790742,
+      "common_component_ic": 0.0435466971790742,
+      "time_series_ic_se": 0.0070578352891609445,
+      "time_series_ic_tstat": 6.169979235127653,
+      "cross_sectional_ic": 0.029518188775741448,
+      "cross_sectional_ic_se": 0.0004996314405908382,
+      "cross_sectional_ic_sd": 0.07065855594715707,
+      "cross_sectional_ic_tstat": 59.07992647707432,
+      "n_dates": 20000,
+      "n_assets": 200
+    },
+    {
+      "signal": "mostly ranking",
+      "ic_ts_target": 0.02,
+      "ic_cs_target": 0.04,
+      "pooled_ic": 0.035671671803816626,
+      "time_series_ic": 0.03186545882307655,
+      "common_component_ic": 0.03186545882307655,
+      "time_series_ic_se": 0.007064064400634269,
+      "time_series_ic_tstat": 4.510924167143127,
+      "cross_sectional_ic": 0.04094376980836654,
+      "cross_sectional_ic_se": 0.0005030789723187627,
+      "cross_sectional_ic_sd": 0.07114611055979131,
+      "cross_sectional_ic_tstat": 81.38636687526585,
+      "n_dates": 20000,
+      "n_assets": 200
+    },
+    {
+      "signal": "ranking only",
+      "ic_ts_target": 0.0,
+      "ic_cs_target": 0.04,
+      "pooled_ic": 0.027113042171786297,
+      "time_series_ic": 0.004180964252937649,
+      "common_component_ic": 0.004180964252937649,
+      "time_series_ic_se": 0.007071120986567138,
+      "time_series_ic_tstat": 0.5912731886330527,
+      "cross_sectional_ic": 0.0399170608446482,
+      "cross_sectional_ic_se": 0.0005015743794875323,
+      "cross_sectional_ic_sd": 0.07093332900101378,
+      "cross_sectional_ic_tstat": 79.58353232761249,
+      "n_dates": 20000,
+      "n_assets": 200
+    }
+  ],
+  "floors": [
+    {
+      "horizon": "1 h",
+      "tau_days": 0.041666666666666664,
+      "directional_floor": 0.04090348960331576,
+      "cs_name_floor": 0.032165016824425574,
+      "cs_portfolio_breakeven_full_roundtrip": 0.07699191096652074,
+      "cs_portfolio_breakeven_measured_turnover": 0.05443328105333015
+    },
+    {
+      "horizon": "4 h",
+      "tau_days": 0.16666666666666666,
+      "directional_floor": 0.02045174480165788,
+      "cs_name_floor": 0.016082508412212787,
+      "cs_portfolio_breakeven_full_roundtrip": 0.03849595548326037,
+      "cs_portfolio_breakeven_measured_turnover": 0.027216640526665076
+    },
+    {
+      "horizon": "1 day",
+      "tau_days": 1.0,
+      "directional_floor": 0.008349389852280027,
+      "cs_name_floor": 0.006565656565656566,
+      "cs_portfolio_breakeven_full_roundtrip": 0.015715908015814017,
+      "cs_portfolio_breakeven_measured_turnover": 0.01111114696718051
+    },
+    {
+      "horizon": "3 days",
+      "tau_days": 3.0,
+      "directional_floor": 0.004820522478783003,
+      "cs_name_floor": 0.0037906835855884527,
+      "cs_portfolio_breakeven_full_roundtrip": 0.00907358372348962,
+      "cs_portfolio_breakeven_measured_turnover": 0.006415023692507161
+    },
+    {
+      "horizon": "1 week",
+      "tau_days": 7.0,
+      "directional_floor": 0.0031557727354656093,
+      "cs_name_floor": 0.0024815849237979568,
+      "cs_portfolio_breakeven_full_roundtrip": 0.005940054891058635,
+      "cs_portfolio_breakeven_measured_turnover": 0.0041996188079784546
+    },
+    {
+      "horizon": "1 month",
+      "tau_days": 30.0,
+      "directional_floor": 0.001524383054499499,
+      "cs_name_floor": 0.0011987194019473333,
+      "cs_portfolio_breakeven_full_roundtrip": 0.0028693191106458644,
+      "cs_portfolio_breakeven_measured_turnover": 0.002028608611226626
+    }
+  ],
+  "breadth": [
+    {
+      "pairwise_corr": 0.2,
+      "factor_corr": 0.4472135954999579,
+      "dispersion": 0.04642077121289563,
+      "directional": 4.901960784313725,
+      "neutral": 199.0,
+      "ir_ratio": 6.371499038687835,
+      "portfolio_breakeven": 0.01579757683194617
+    },
+    {
+      "pairwise_corr": 0.3103,
+      "factor_corr": 0.5570457790882182,
+      "dispersion": 0.04310200479096071,
+      "directional": 3.1872662339421542,
+      "neutral": 199.0,
+      "ir_ratio": 7.9016423292882605,
+      "portfolio_breakeven": 0.017013958014029728
+    },
+    {
+      "pairwise_corr": 0.4,
+      "factor_corr": 0.6324555320336759,
+      "dispersion": 0.04020156713363299,
+      "directional": 2.4813895781637716,
+      "neutral": 199.0,
+      "ir_ratio": 8.955277773469676,
+      "portfolio_breakeven": 0.018241470472935832
+    },
+    {
+      "pairwise_corr": 0.49,
+      "factor_corr": 0.7,
+      "dispersion": 0.037064013544137395,
+      "directional": 2.030250735965892,
+      "neutral": 199.0,
+      "ir_ratio": 9.900376255476354,
+      "portfolio_breakeven": 0.01978565270489734
+    },
+    {
+      "pairwise_corr": 0.55,
+      "factor_corr": 0.7416198487095663,
+      "dispersion": 0.03481557840967173,
+      "directional": 1.810774105930285,
+      "neutral": 199.0,
+      "ir_ratio": 10.483212770901867,
+      "portfolio_breakeven": 0.021063435775928223
+    },
+    {
+      "pairwise_corr": 0.7,
+      "factor_corr": 0.8366600265340756,
+      "dispersion": 0.028426800734518125,
+      "directional": 1.4255167498218106,
+      "neutral": 199.0,
+      "ir_ratio": 11.815180912707175,
+      "portfolio_breakeven": 0.025797334940454202
+    },
+    {
+      "pairwise_corr": 0.8,
+      "factor_corr": 0.8944271909999159,
+      "dispersion": 0.023210385606447816,
+      "directional": 1.2484394506866416,
+      "neutral": 199.0,
+      "ir_ratio": 12.625331678811452,
+      "portfolio_breakeven": 0.03159515366389234
+    }
+  ],
+  "backtest_full": [
+    {
+      "cs_ic_target": 0.005,
+      "cs_ic_realised": 0.005203639596008833,
+      "top_fraction": 1.0,
+      "turnover_per_period": 1.415166892898012,
+      "gross_bps": 4.33029466473426,
+      "fees_bps": 9.198584803837077,
+      "net_bps": -4.868290139102817,
+      "net_se_bps": 0.7585336417445975,
+      "sharpe_gross_per_period": 0.07370085591875968,
+      "sharpe_net_per_period": -0.08285638498461184,
+      "ir_net_annual": -1.5829690124706,
+      "ic_times_sqrt_n": 0.07071067811865475
+    },
+    {
+      "cs_ic_target": 0.01,
+      "cs_ic_realised": 0.011819760582816141,
+      "top_fraction": 1.0,
+      "turnover_per_period": 1.4121580758043362,
+      "gross_bps": 9.76601696574654,
+      "fees_bps": 9.179027492728187,
+      "net_bps": 0.5869894730183548,
+      "net_se_bps": 0.7541850863348512,
+      "sharpe_gross_per_period": 0.16714792454421176,
+      "sharpe_net_per_period": 0.010047933390141262,
+      "ir_net_annual": 0.1919654978782417,
+      "ic_times_sqrt_n": 0.1414213562373095
+    },
+    {
+      "cs_ic_target": 0.02,
+      "cs_ic_realised": 0.017346556732164266,
+      "top_fraction": 1.0,
+      "turnover_per_period": 1.4146203119302545,
+      "gross_bps": 14.340546724109158,
+      "fees_bps": 9.195032027546654,
+      "net_bps": 5.145514696562507,
+      "net_se_bps": 0.7454822638847779,
+      "sharpe_gross_per_period": 0.2483475916401474,
+      "sharpe_net_per_period": 0.08910783302253612,
+      "ir_net_annual": 1.7024027595371916,
+      "ic_times_sqrt_n": 0.282842712474619
+    },
+    {
+      "cs_ic_target": 0.026,
+      "cs_ic_realised": 0.025799632127554675,
+      "top_fraction": 1.0,
+      "turnover_per_period": 1.4144725357195367,
+      "gross_bps": 21.25856269270417,
+      "fees_bps": 9.194071482176986,
+      "net_bps": 12.064491210527187,
+      "net_se_bps": 0.7622699464946371,
+      "sharpe_gross_per_period": 0.3600606742314612,
+      "sharpe_net_per_period": 0.20432644958962834,
+      "ir_net_annual": 3.903651338259421,
+      "ic_times_sqrt_n": 0.3676955262170047
+    },
+    {
+      "cs_ic_target": 0.03,
+      "cs_ic_realised": 0.028804215430758943,
+      "top_fraction": 1.0,
+      "turnover_per_period": 1.413343767919747,
+      "gross_bps": 23.749505581422575,
+      "fees_bps": 9.186734491478356,
+      "net_bps": 14.562771089944217,
+      "net_se_bps": 0.7513347693648563,
+      "sharpe_gross_per_period": 0.4081429568301231,
+      "sharpe_net_per_period": 0.25022742726549574,
+      "ir_net_annual": 4.780588285442155,
+      "ic_times_sqrt_n": 0.4242640687119285
+    },
+    {
+      "cs_ic_target": 0.05,
+      "cs_ic_realised": 0.05039375045322504,
+      "top_fraction": 1.0,
+      "turnover_per_period": 1.413970079358355,
+      "gross_bps": 41.69915916624707,
+      "fees_bps": 9.19080551582931,
+      "net_bps": 32.50835365041776,
+      "net_se_bps": 0.7677481212983571,
+      "sharpe_gross_per_period": 0.7011419588770829,
+      "sharpe_net_per_period": 0.546638968380104,
+      "ir_net_annual": 10.443522827061635,
+      "ic_times_sqrt_n": 0.7071067811865476
+    },
+    {
+      "cs_ic_target": 0.08,
+      "cs_ic_realised": 0.0812750130644991,
+      "top_fraction": 1.0,
+      "turnover_per_period": 1.4134148273713247,
+      "gross_bps": 67.31196770366755,
+      "fees_bps": 9.187196377913613,
+      "net_bps": 58.12477132575394,
+      "net_se_bps": 0.7596778964546554,
+      "sharpe_gross_per_period": 1.1438882564293933,
+      "sharpe_net_per_period": 0.9877707047392746,
+      "ir_net_annual": 18.87133281664308,
+      "ic_times_sqrt_n": 1.131370849898476
+    }
+  ],
+  "backtest_deciles": [
+    {
+      "cs_ic_target": 0.005,
+      "cs_ic_realised": 0.004795603935828536,
+      "top_fraction": 0.2,
+      "turnover_per_period": 1.8086835664114203,
+      "gross_bps": 6.2468975214508955,
+      "fees_bps": 11.756443181674236,
+      "net_bps": -5.509545660223337,
+      "net_se_bps": 1.3711505769111274,
+      "sharpe_gross_per_period": 0.05882405829453088,
+      "sharpe_net_per_period": -0.05187462983407839,
+      "ir_net_annual": -0.9910634114194051,
+      "ic_times_sqrt_n": 0.07071067811865475
+    },
+    {
+      "cs_ic_target": 0.01,
+      "cs_ic_realised": 0.009827246624549271,
+      "top_fraction": 0.2,
+      "turnover_per_period": 1.8067145335335344,
+      "gross_bps": 11.583715237435738,
+      "fees_bps": 11.743644467967973,
+      "net_bps": -0.15992923053223373,
+      "net_se_bps": 1.3592539724569825,
+      "sharpe_gross_per_period": 0.11002236181199403,
+      "sharpe_net_per_period": -0.001518978446938009,
+      "ir_net_annual": -0.029020042481459344,
+      "ic_times_sqrt_n": 0.1414213562373095
+    },
+    {
+      "cs_ic_target": 0.02,
+      "cs_ic_realised": 0.019431244958362123,
+      "top_fraction": 0.2,
+      "turnover_per_period": 1.8075239460829888,
+      "gross_bps": 23.317814233676724,
+      "fees_bps": 11.748905649539429,
+      "net_bps": 11.568908584137294,
+      "net_se_bps": 1.3285726298451042,
+      "sharpe_gross_per_period": 0.2265873309872646,
+      "sharpe_net_per_period": 0.1124168632150321,
+      "ir_net_annual": 2.1477211560894354,
+      "ic_times_sqrt_n": 0.282842712474619
+    },
+    {
+      "cs_ic_target": 0.026,
+      "cs_ic_realised": 0.024328376513281038,
+      "top_fraction": 0.2,
+      "turnover_per_period": 1.8092993073384072,
+      "gross_bps": 28.640647411488633,
+      "fees_bps": 11.760445497699648,
+      "net_bps": 16.880201913788984,
+      "net_se_bps": 1.3606723612899028,
+      "sharpe_gross_per_period": 0.2717236749327276,
+      "sharpe_net_per_period": 0.1601579306246971,
+      "ir_net_annual": 3.059812968275125,
+      "ic_times_sqrt_n": 0.3676955262170047
+    },
+    {
+      "cs_ic_target": 0.03,
+      "cs_ic_realised": 0.029757071106014592,
+      "top_fraction": 0.2,
+      "turnover_per_period": 1.808407508358555,
+      "gross_bps": 34.32227201416089,
+      "fees_bps": 11.754648804330609,
+      "net_bps": 22.567623209830277,
+      "net_se_bps": 1.338548137677332,
+      "sharpe_gross_per_period": 0.33101139150542563,
+      "sharpe_net_per_period": 0.2176587861502472,
+      "ir_net_annual": 4.158365270604021,
+      "ic_times_sqrt_n": 0.4242640687119285
+    },
+    {
+      "cs_ic_target": 0.05,
+      "cs_ic_realised": 0.05007609738641524,
+      "top_fraction": 0.2,
+      "turnover_per_period": 1.8067908483680315,
+      "gross_bps": 59.80288124956294,
+      "fees_bps": 11.744140514392203,
+      "net_bps": 48.05874073517072,
+      "net_se_bps": 1.3263396518286241,
+      "sharpe_gross_per_period": 0.5821215776324506,
+      "sharpe_net_per_period": 0.4677803865457787,
+      "ir_net_annual": 8.936931736534364,
+      "ic_times_sqrt_n": 0.7071067811865476
+    },
+    {
+      "cs_ic_target": 0.08,
+      "cs_ic_realised": 0.08021427200122218,
+      "top_fraction": 0.2,
+      "turnover_per_period": 1.8064738700941854,
+      "gross_bps": 95.05958841248277,
+      "fees_bps": 11.742080155612205,
+      "net_bps": 83.31750825687055,
+      "net_se_bps": 1.3661060385384247,
+      "sharpe_gross_per_period": 0.8983462255612011,
+      "sharpe_net_per_period": 0.7873652381860409,
+      "ir_net_annual": 15.042591754111813,
+      "ic_times_sqrt_n": 1.131370849898476
+    }
+  ],
+  "estimation": [
+    {
+      "ic": 0.005,
+      "ts_obs": 359983.0002249999,
+      "cs_dates": 1800.0000000000002,
+      "ratio": 199.99055568055547
+    },
+    {
+      "ic": 0.01,
+      "ts_obs": 89983.00089999998,
+      "cs_dates": 450.00000000000006,
+      "ratio": 199.96222422222218
+    },
+    {
+      "ic": 0.02,
+      "ts_obs": 22483.0036,
+      "cs_dates": 112.50000000000001,
+      "ratio": 199.84892088888887
+    },
+    {
+      "ic": 0.03,
+      "ts_obs": 9983.008100000003,
+      "cs_dates": 50.00000000000001,
+      "ratio": 199.660162
+    },
+    {
+      "ic": 0.05,
+      "ts_obs": 3583.0225,
+      "cs_dates": 17.999999999999996,
+      "ratio": 199.0568055555556
+    },
+    {
+      "ic": 0.1,
+      "ts_obs": 883.0899999999997,
+      "cs_dates": 4.499999999999999,
+      "ratio": 196.24222222222218
+    }
+  ]
+}

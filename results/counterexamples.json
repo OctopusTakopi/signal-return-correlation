@@ -1,0 +1,447 @@
+{
+  "seed": 18061724,
+  "kappa": 3.0,
+  "shape": {
+    "title": "A. Signal shape: correlation cannot see the tails of x",
+    "rho_pct": 0.5555555555555556,
+    "note": "every row has the same population correlation as a Gaussian alpha sitting exactly on the floor",
+    "gaussian_net_bps": 0.0012738477234924249,
+    "gaussian_trade_frequency": 0.0026997960632601866,
+    "optimal_sparsity": 0.027777777777777776,
+    "optimal_sparse_net_bps": 0.13888888888888887,
+    "optimal_ratio_closed_form": 109.03099823274505,
+    "rows": [
+      {
+        "sparsity": 0.5,
+        "fires_pct": 50.0,
+        "signal_size_when_firing": 1.414213562373095,
+        "band_k": 2.9999537033464736,
+        "clears_band_by": 0.4714117957205565,
+        "rho_realised": 0.006106756670252047,
+        "net_sim_bps": 0.0,
+        "net_sim_se_bps": 0.0,
+        "net_closed_bps": 0.0,
+        "vs_gaussian": 0.0,
+        "trade_frequency": 0.0
+      },
+      {
+        "sparsity": 0.1,
+        "fires_pct": 10.0,
+        "signal_size_when_firing": 3.162277660168379,
+        "band_k": 2.9999537033464736,
+        "clears_band_by": 1.0541088206264089,
+        "rho_realised": 0.00525699592927622,
+        "net_sim_bps": -0.0014241235223332559,
+        "net_sim_se_bps": 0.021246255217746788,
+        "net_closed_bps": 0.027054410313204408,
+        "vs_gaussian": 21.238339413938032,
+        "trade_frequency": 0.10012145
+      },
+      {
+        "sparsity": 0.027777777777777776,
+        "fires_pct": 2.7777777777777777,
+        "signal_size_when_firing": 6.0,
+        "band_k": 2.9999537033464736,
+        "clears_band_by": 2.000030864911998,
+        "rho_realised": 0.005645263267705591,
+        "net_sim_bps": 0.14339852996695082,
+        "net_sim_se_bps": 0.01116172000664161,
+        "net_closed_bps": 0.13889317568222195,
+        "vs_gaussian": 109.03436346491056,
+        "trade_frequency": 0.02775735
+      },
+      {
+        "sparsity": 0.01,
+        "fires_pct": 1.0,
+        "signal_size_when_firing": 10.0,
+        "band_k": 2.9999537033464736,
+        "clears_band_by": 3.3333847748533305,
+        "rho_realised": 0.005485991008233545,
+        "net_sim_bps": 0.11455754912839815,
+        "net_sim_se_bps": 0.0067059869944534395,
+        "net_closed_bps": 0.11666923874266652,
+        "vs_gaussian": 91.58805765480516,
+        "trade_frequency": 0.00998845
+      },
+      {
+        "sparsity": 0.001,
+        "fires_pct": 0.1,
+        "signal_size_when_firing": 31.622776601683796,
+        "band_k": 2.9999537033464736,
+        "clears_band_by": 10.54108820626409,
+        "rho_realised": 0.005084852983786656,
+        "net_sim_bps": 0.043261529173664326,
+        "net_sim_se_bps": 0.0021414809406194273,
+        "net_closed_bps": 0.04770544103132045,
+        "vs_gaussian": 37.4498773688032,
+        "trade_frequency": 0.00100075
+      }
+    ]
+  },
+  "encoding": {
+    "title": "B. Encoding: the same information scores exactly 0% or 1.67%",
+    "relationship": "E[y|z] = a (z^2 - 1), a chosen so the re-encoded alpha sits at 3x the floor",
+    "floor_pct": 0.5555555555555556,
+    "rho_raw_pct": -0.059464084593759604,
+    "rho_raw_t": -1.681898298131917,
+    "rho_raw_population_pct": 0.0,
+    "rho_encoded_pct": 1.7526389422177033,
+    "rho_encoded_t": 49.572115240550225,
+    "rho_encoded_population_pct": 1.6664352333993333,
+    "rho_encoded_se_bootstrap_pct": 0.04049287208174157,
+    "rho_encoded_z_vs_population": 2.128861312784963,
+    "target_rho_pct": 1.6666666666666667,
+    "net_raw_bps": -1.6579337037453548,
+    "net_encoded_bps": 0.7481833123324301,
+    "net_encoded_se_bps": 0.03679184056916192,
+    "verdict": "a screen on Pearson correlation discards this alpha at t = 0; the floor is not scale- or encoding-invariant"
+  },
+  "conditioning": {
+    "title": "C. Conditioning: identical pooled correlation, 7.4 bps vs 0.9 bps vs 0",
+    "pooled_floor_pct": 2.4596747752497685,
+    "conditional_floor_calm_pct": 1.0000000000000002,
+    "conditional_floor_stress_pct": 3.3333333333333335,
+    "rho_pct": 4.919349550499537,
+    "multiple_of_pooled_floor": 2.0,
+    "sigma_bar_pct": 2.23606797749979,
+    "cost_bar_bps": 16.5,
+    "rows": [
+      {
+        "name": "A: edge in the calm state",
+        "rho_pooled_pct": 4.879499247751176,
+        "conditional_rho_calm_pct": 21.999999999999996,
+        "conditional_rho_stress_pct": 0.0,
+        "multiple_of_conditional_floor": 21.999999999999993,
+        "net_sim_bps": 7.33787800955607,
+        "net_sim_se_bps": 0.023963970784162507,
+        "net_closed_bps": 7.358205784539602,
+        "trade_frequency": 0.445915625
+      },
+      {
+        "name": "B: edge in the stressed state",
+        "rho_pooled_pct": 4.9280327973082425,
+        "conditional_rho_calm_pct": 0.0,
+        "conditional_rho_stress_pct": 7.333333333333333,
+        "multiple_of_conditional_floor": 2.1999999999999997,
+        "net_sim_bps": 0.9250527352644683,
+        "net_sim_se_bps": 0.031178316598419086,
+        "net_closed_bps": 0.8735195063333359,
+        "trade_frequency": 0.086354625
+      },
+      {
+        "name": "C: edge only while the name is halted",
+        "rho_pooled_pct": 4.914796577550994,
+        "conditional_rho_calm_pct": 0.0,
+        "conditional_rho_stress_pct": 7.333333333333333,
+        "multiple_of_conditional_floor": 2.1999999999999997,
+        "net_sim_bps": 0.0,
+        "net_sim_se_bps": 0.0,
+        "net_closed_bps": 0.0,
+        "trade_frequency": 0.0
+      }
+    ],
+    "spread": Infinity,
+    "verdict": "the pooled floor uses an average sigma and an average cost. Both averages are taken over states the alpha does not weight equally, so the floor prices an alpha nobody holds."
+  },
+  "estimation": {
+    "title": "D. Estimation: at these correlations, noise wins a coin flip",
+    "floor_pct": 0.5555555555555556,
+    "rho_true_pct": 1.1111111111111112,
+    "head_to_head": [
+      {
+        "sample": "1 name, 2 years daily",
+        "n_obs": 504,
+        "se_pct": 4.458229154057261,
+        "rho_true_pct": 1.1111111111111112,
+        "t_stat_expected": 0.24922700756643074,
+        "p_junk_beats_true": 0.430715,
+        "p_true_measures_above_floor": 0.54939,
+        "p_junk_measures_above_floor": 0.450695
+      },
+      {
+        "sample": "1 name, 10 years daily",
+        "n_obs": 2520,
+        "se_pct": 1.9921970668289584,
+        "rho_true_pct": 1.1111111111111112,
+        "t_stat_expected": 0.5577315264697689,
+        "p_junk_beats_true": 0.346945,
+        "p_true_measures_above_floor": 0.60836,
+        "p_junk_measures_above_floor": 0.38977
+      },
+      {
+        "sample": "100 names, 2 years daily",
+        "n_obs": 50400,
+        "se_pct": 0.44538482968450094,
+        "rho_true_pct": 1.1111111111111112,
+        "t_stat_expected": 2.4947215016240976,
+        "p_junk_beats_true": 0.038765,
+        "p_true_measures_above_floor": 0.89415,
+        "p_junk_measures_above_floor": 0.10678
+      },
+      {
+        "sample": "500 names, 2 years daily",
+        "n_obs": 252000,
+        "se_pct": 0.19918057024107308,
+        "rho_true_pct": 1.1111111111111112,
+        "t_stat_expected": 5.578411136017466,
+        "p_junk_beats_true": 8e-05,
+        "p_true_measures_above_floor": 0.997445,
+        "p_junk_measures_above_floor": 0.002655
+      }
+    ],
+    "multiple_testing": [
+      {
+        "n_obs": 504,
+        "candidates_tested": 1,
+        "expected_best_junk_rho_pct": -0.08185803000818798,
+        "multiple_of_floor": -0.14734445401473836,
+        "asymptotic_sqrt_2lnM": 0.0
+      },
+      {
+        "n_obs": 504,
+        "candidates_tested": 100,
+        "expected_best_junk_rho_pct": 11.1887402290137,
+        "multiple_of_floor": 20.139732412224657,
+        "asymptotic_sqrt_2lnM": 13.531746320730083
+      },
+      {
+        "n_obs": 504,
+        "candidates_tested": 1000,
+        "expected_best_junk_rho_pct": 14.450795446086346,
+        "multiple_of_floor": 26.01143180295542,
+        "asymptotic_sqrt_2lnM": 16.57293690728617
+      },
+      {
+        "n_obs": 504,
+        "candidates_tested": 100000,
+        "expected_best_junk_rho_pct": 19.548419490268575,
+        "multiple_of_floor": 35.187155082483436,
+        "asymptotic_sqrt_2lnM": 21.395569546555198
+      },
+      {
+        "n_obs": 2520,
+        "candidates_tested": 1,
+        "expected_best_junk_rho_pct": 0.009255500098090681,
+        "multiple_of_floor": 0.016659900176563224,
+        "asymptotic_sqrt_2lnM": 0.0
+      },
+      {
+        "n_obs": 2520,
+        "candidates_tested": 100,
+        "expected_best_junk_rho_pct": 4.999401205986198,
+        "multiple_of_floor": 8.998922170775156,
+        "asymptotic_sqrt_2lnM": 6.046774267917269
+      },
+      {
+        "n_obs": 2520,
+        "candidates_tested": 1000,
+        "expected_best_junk_rho_pct": 6.45771573168445,
+        "multiple_of_floor": 11.62388831703201,
+        "asymptotic_sqrt_2lnM": 7.405755773094305
+      },
+      {
+        "n_obs": 2520,
+        "candidates_tested": 100000,
+        "expected_best_junk_rho_pct": 8.738043232380429,
+        "multiple_of_floor": 15.72847781828477,
+        "asymptotic_sqrt_2lnM": 9.560789591757892
+      },
+      {
+        "n_obs": 252000,
+        "candidates_tested": 1,
+        "expected_best_junk_rho_pct": 0.000496629184215417,
+        "multiple_of_floor": 0.0008939325315877504,
+        "asymptotic_sqrt_2lnM": 0.0
+      },
+      {
+        "n_obs": 252000,
+        "candidates_tested": 100,
+        "expected_best_junk_rho_pct": 0.49976117514079704,
+        "multiple_of_floor": 0.8995701152534347,
+        "asymptotic_sqrt_2lnM": 0.604558638729395
+      },
+      {
+        "n_obs": 252000,
+        "candidates_tested": 1000,
+        "expected_best_junk_rho_pct": 0.6458835027153547,
+        "multiple_of_floor": 1.1625903048876383,
+        "asymptotic_sqrt_2lnM": 0.740430092239307
+      },
+      {
+        "n_obs": 252000,
+        "candidates_tested": 100000,
+        "expected_best_junk_rho_pct": 0.8733063244940618,
+        "multiple_of_floor": 1.5719513840893111,
+        "asymptotic_sqrt_2lnM": 0.9558911387578859
+      }
+    ],
+    "verdict": "the correlations the thread calls easy to find are also nearly impossible to measure on one name. Breadth is what makes a small correlation both tradable and visible -- the same sqrt(N) appears in the IR and in the standard error."
+  },
+  "breadth": {
+    "title": "E. Breadth: crowding caps IR at rho / sqrt(rho_alpha) * sqrt(252)",
+    "rho_pct": 1.1111111111111112,
+    "asymptote_note": "BR_eff -> 1/rho_alpha as N -> infinity, so with 10% alpha correlation no number of names buys more than 10 independent bets per day",
+    "rows": [
+      {
+        "names": 10,
+        "alpha_correlation": 0.0,
+        "effective_breadth": 10.0,
+        "ir_assuming_independence": 0.5577389237566273,
+        "ir_actual": 0.5577389237566274,
+        "haircut": 1.0000000000000002
+      },
+      {
+        "names": 10,
+        "alpha_correlation": 0.02,
+        "effective_breadth": 8.474576271186441,
+        "ir_assuming_independence": 0.5577389237566273,
+        "ir_actual": 0.5134402966242793,
+        "haircut": 0.9205746178983234
+      },
+      {
+        "names": 10,
+        "alpha_correlation": 0.05,
+        "effective_breadth": 6.8965517241379315,
+        "ir_assuming_independence": 0.5577389237566273,
+        "ir_actual": 0.46317696556477606,
+        "haircut": 0.8304547985373998
+      },
+      {
+        "names": 10,
+        "alpha_correlation": 0.1,
+        "effective_breadth": 5.2631578947368425,
+        "ir_assuming_independence": 0.5577389237566273,
+        "ir_actual": 0.40462634294735167,
+        "haircut": 0.7254762501100117
+      },
+      {
+        "names": 10,
+        "alpha_correlation": 0.3,
+        "effective_breadth": 2.702702702702703,
+        "ir_assuming_independence": 0.5577389237566273,
+        "ir_actual": 0.2899546595838367,
+        "haircut": 0.5198752449100363
+      },
+      {
+        "names": 100,
+        "alpha_correlation": 0.0,
+        "effective_breadth": 100.0,
+        "ir_assuming_independence": 1.7637253388019374,
+        "ir_actual": 1.7637253388019376,
+        "haircut": 1.0000000000000002
+      },
+      {
+        "names": 100,
+        "alpha_correlation": 0.02,
+        "effective_breadth": 33.557046979865774,
+        "ir_assuming_independence": 1.7637253388019374,
+        "ir_actual": 1.0216986564251433,
+        "haircut": 0.5792844463634924
+      },
+      {
+        "names": 100,
+        "alpha_correlation": 0.05,
+        "effective_breadth": 16.80672268907563,
+        "ir_assuming_independence": 1.7637253388019374,
+        "ir_actual": 0.723056894298045,
+        "haircut": 0.40996003084539384
+      },
+      {
+        "names": 100,
+        "alpha_correlation": 0.1,
+        "effective_breadth": 9.174311926605505,
+        "ir_assuming_independence": 1.7637253388019374,
+        "ir_actual": 0.5342170014650534,
+        "haircut": 0.3028912664076914
+      },
+      {
+        "names": 100,
+        "alpha_correlation": 0.3,
+        "effective_breadth": 3.257328990228013,
+        "ir_assuming_independence": 1.7637253388019374,
+        "ir_actual": 0.3183184171263492,
+        "haircut": 0.18048071892110842
+      },
+      {
+        "names": 500,
+        "alpha_correlation": 0.0,
+        "effective_breadth": 500.0,
+        "ir_assuming_independence": 3.9438097511999795,
+        "ir_actual": 3.94380975119998,
+        "haircut": 1.0000000000000002
+      },
+      {
+        "names": 500,
+        "alpha_correlation": 0.02,
+        "effective_breadth": 45.537340619307834,
+        "ir_assuming_independence": 3.9438097511999795,
+        "ir_actual": 1.1901858602488318,
+        "haircut": 0.30178582014172844
+      },
+      {
+        "names": 500,
+        "alpha_correlation": 0.05,
+        "effective_breadth": 19.267822736030826,
+        "ir_assuming_independence": 3.9438097511999795,
+        "ir_actual": 0.7741894973392288,
+        "haircut": 0.19630498076223551
+      },
+      {
+        "names": 500,
+        "alpha_correlation": 0.1,
+        "effective_breadth": 9.823182711198427,
+        "ir_assuming_independence": 3.9438097511999795,
+        "ir_actual": 0.552786037997267,
+        "haircut": 0.14016549298025122
+      },
+      {
+        "names": 500,
+        "alpha_correlation": 0.3,
+        "effective_breadth": 3.317850033178501,
+        "ir_assuming_independence": 3.9438097511999795,
+        "ir_actual": 0.3212619789959194,
+        "haircut": 0.08145980644684225
+      },
+      {
+        "names": 2000,
+        "alpha_correlation": 0.0,
+        "effective_breadth": 2000.0,
+        "ir_assuming_independence": 7.887619502399959,
+        "ir_actual": 7.88761950239996,
+        "haircut": 1.0000000000000002
+      },
+      {
+        "names": 2000,
+        "alpha_correlation": 0.02,
+        "effective_breadth": 48.804294777940456,
+        "ir_assuming_independence": 7.887619502399959,
+        "ir_actual": 1.2321397685884674,
+        "haircut": 0.15621186699150047
+      },
+      {
+        "names": 2000,
+        "alpha_correlation": 0.05,
+        "effective_breadth": 19.811788013868252,
+        "ir_assuming_independence": 7.887619502399959,
+        "ir_actual": 0.7850418160476798,
+        "haircut": 0.09952835780286001
+      },
+      {
+        "names": 2000,
+        "alpha_correlation": 0.1,
+        "effective_breadth": 9.955201592832255,
+        "ir_assuming_independence": 7.887619502399959,
+        "ir_actual": 0.556488230687925,
+        "haircut": 0.07055211404639927
+      },
+      {
+        "names": 2000,
+        "alpha_correlation": 0.3,
+        "effective_breadth": 3.32944897619444,
+        "ir_assuming_independence": 7.887619502399959,
+        "ir_actual": 0.3218230423830621,
+        "haircut": 0.04080103538021088
+      }
+    ]
+  }
+}
